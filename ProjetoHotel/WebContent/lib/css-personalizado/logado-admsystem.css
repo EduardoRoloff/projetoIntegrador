@@ -1,0 +1,18 @@
+@CHARSET "UTF-8";
+
+.row {
+	margin-top: 62px;
+}
+
+.page-header {
+	margin: 72px 0 20px;
+}
+
+#element {
+	margin-top: 139px;
+}
+
+#loc {
+	margin-top: 148px;
+	margin-left: 355px;
+}

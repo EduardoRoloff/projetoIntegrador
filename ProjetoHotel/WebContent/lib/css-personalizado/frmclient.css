@@ -1,0 +1,183 @@
+@CHARSET "UTF-8";
+@font-face{
+	font-family: 'OpenSans';
+	src: url("../../fonts/opensans/OpenSans-Regular.ttf");
+	font-size: 1em;
+}
+
+@font-face{
+	font-family: 'OpenSans-Light';
+	src: url("../../fonts/opensans/OpenSans-Light.ttf");
+	font-size: 1em;
+}
+
+#banner-frm {
+	width: 100%;
+	height: 728px;
+	position: relative;
+	background: url("../img/logo-frm.jpg") no-repeat;
+	background-position: 0px -100px;
+	top: -119px;
+}
+
+#form {
+	
+	width: 381px;
+    height: 404px;
+    margin-top: 189px;
+    margin-left: 172px;
+    position: relative;
+    background-color: rgba(94, 41, 154, .6);
+}
+	
+
+section label {
+    color: #FFF;
+    font-size: 16px;
+    padding: 7px 6px;
+    margin-top: 20px;
+    font-family: 'OpenSans';
+}
+
+section h3 {
+	color: #FFF;
+	font-size: 18px;
+	font-family: 'OpenSans';
+	font-weight: bold;
+	position: relative;
+	top: 11px;
+}
+
+#form .formulario {
+	margin-top: 40px;
+}
+
+
+#criar-conta .btn {
+	min-width: 349px;
+	height: 35px;
+	line-height: 22px;
+	border-radius: 0;
+	margin-top: 51px;
+	
+	color: #FFF;
+    background-color: #1A0066;
+    border-color: #FFF;
+    
+    font-size: 18px;
+    font-family: 'OpenSans';
+    font-weight: bold;
+}
+
+/*
+*
+*FORMATACAO DA PAGINA DE LOGIN
+*
+*/
+
+/*
+#efetuar-login .btn {
+	min-width: 349px;
+	height: 35px;
+	line-height: 22px;
+	border-radius: 0;
+	margin-top: 63px;
+
+	color: #FFF;
+    background-color: #026DC5;
+    border-color: #FFF;
+    
+    font-size: 18px;
+    font-family: 'OpenSans';
+    font-weight: bold;
+
+}
+
+#form-login {
+    width: 381px;
+    height: 395px;
+    margin-top: 213px;
+    margin-left: 172px;
+    position: relative;
+    background-color: rgba(94, 41, 154, .6);
+}
+
+#nav-criarconta h4 {
+color: #FFF;
+font-size: 15px;
+font-family: 'OpenSans';
+
+top: 42px;
+}
+
+
+*/
+
+#nav-criarconta a {
+	color: #FFFF00;
+font-size: 15px;
+font-family: 'OpenSans';
+position: relative;
+}
+
+#nav-criarconta h4 {
+color: #FFF;
+font-size: 15px;
+font-family: 'OpenSans';
+
+top: 42px;
+}
+
+label {
+	color: #fff;
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+
+
+
+
+
+/*
+*
+*CONFIGURACAO ADMIN
+*/
+
+#form-adm {
+	
+	width: 381px;
+    height: 404px;
+    margin-top: 226px;
+    margin-left: 172px;
+    position: relative;
+    background-color: #000;
+}
+
+#banner-adm {
+	width: 100%;
+	height: 728px;
+	position: relative;
+	background-color: #464637;
+	background-position: 0px -100px;
+	top: -196px;
+}
+
+#banner-adm h1 {
+    color: #FFBF00;
+    top: 300px;
+    position: relative;
+    font-size: 115px;
+    text-shadow: 10px 15px 2px rgba(0, 0, 0, .45);
+    font-family: 'OpenSans-Light';
+    margin-right: 49px;
+}
+
+#banner-adm h1 small {
+    font-size: 32px;
+    display: block;
+    color: #FFF;
+    font-family: 'OpenSans-Light';
+}
