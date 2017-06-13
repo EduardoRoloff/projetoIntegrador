@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.hotel.model.ECliente;
-import br.com.senai.util.Conexao;
+import br.com.hotel.util.Conexao;
 
 public class PCliente {
 	
