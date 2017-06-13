@@ -13,6 +13,7 @@ public class PClienteTest {
 	PCliente persistencia;
 	ECliente cliente;
 	
+	//Teste
 	@Before
 	public void setUp() throws Exception {
 		persistencia = new PCliente();
