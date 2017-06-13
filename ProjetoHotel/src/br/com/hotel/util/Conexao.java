@@ -1,4 +1,4 @@
-package br.com.senai.util;
+package br.com.hotel.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -16,7 +16,7 @@ public class Conexao {
                 String driver = "org.postgresql.Driver";
                 String url = "jdbc:postgresql://localhost:5432/hotelcom";
                 String user = "postgres";
-                String password = "123456";
+                String password = "gomes";
                 Class.forName(driver);
                 connection = DriverManager.getConnection(url, user, password);
             } catch (ClassNotFoundException e) {

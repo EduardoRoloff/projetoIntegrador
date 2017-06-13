@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import br.com.hotel.model.EAdmistrador;
-import br.com.senai.util.Conexao;
+import br.com.hotel.util.Conexao;
 
 public class AdminDAO {
 	
