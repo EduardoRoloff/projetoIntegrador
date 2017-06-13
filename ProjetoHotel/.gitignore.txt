@@ -1,5 +1,0 @@
-.gitignore
-.settings/
-build/
-.classpath
-.project
