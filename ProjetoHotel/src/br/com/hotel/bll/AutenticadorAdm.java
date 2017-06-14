@@ -23,6 +23,7 @@ import br.com.hotel.model.EHotel;
 public class AutenticadorAdm extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
+	//Teste paulo
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
