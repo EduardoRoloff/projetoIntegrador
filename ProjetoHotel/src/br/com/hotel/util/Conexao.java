@@ -16,7 +16,7 @@ public class Conexao {
                 String driver = "org.postgresql.Driver";
                 String url = "jdbc:postgresql://localhost:5432/hotelcom";
                 String user = "postgres";
-                String password = "gomes";
+                String password = "postgres";
                 Class.forName(driver);
                 connection = DriverManager.getConnection(url, user, password);
             } catch (ClassNotFoundException e) {
