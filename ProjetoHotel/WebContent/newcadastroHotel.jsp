@@ -17,7 +17,7 @@
 
 <!-- CSS personalizado -->
 <link rel="stylesheet" href="lib/css-personalizado/logado-admsystem.css">
-
+<script type="text/javascript" src="js/validaformhotel.js"></script>
 </head>
 
 
@@ -37,7 +37,7 @@
 
 			<h3 class="page-header">Adicionar Hotel</h3>
 
-			<form class="container" action="hotelcontroller.do" method="post">
+			<form class="container" name="formhotel" action="hotelcontroller.do" method="post">
 
 				<!-- INICIO DO FORMULARIO -->
 				<div class="row">
@@ -144,7 +144,7 @@
 				<div id="actions" class="row">
 
 					<div class="col-md-12">
-						<button type="submit" name="txtsalvar" value="salvar" class="btn btn-primary">Salvar</button>
+						<button type="submit" name="txtsalvar" value="salvar" class="btn btn-primary" onclick= "validarform();">Salvar</button>
 						<a href="hotelcontroller.do?action=list" class="btn btn-default">Cancelar</a>
 					</div>
 

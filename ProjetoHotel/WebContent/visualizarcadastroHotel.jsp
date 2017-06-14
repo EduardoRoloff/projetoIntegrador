@@ -51,7 +51,7 @@
 				<div class="row">
 					<div class="form-group col-md-3">
 						<label for="campo1">CEP</label> 
-						<input type="text" name="txtcep" class="form-control" id="cep" value="${requestScope.hotel.cep}" />
+						<input type="text" name="txtcep" class="form-control" id="cep" value="${requestScope.hotel.cep}" readonly/>
 					</div>
 					
 					<div class="form-group col-md-9">

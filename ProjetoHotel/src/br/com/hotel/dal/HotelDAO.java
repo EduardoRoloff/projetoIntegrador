@@ -9,7 +9,7 @@ import java.util.Iterator;
 import java.util.List;
 
 import br.com.hotel.model.EHotel;
-import br.com.senai.util.Conexao;
+import br.com.hotel.util.Conexao;
 
 public class HotelDAO {
 
