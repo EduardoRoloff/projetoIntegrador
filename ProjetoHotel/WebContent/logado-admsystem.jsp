@@ -55,7 +55,6 @@
 			 </form>
 			    <div class="col-md-3">
 			        <a href="hotelcontroller.do?action=new" class="btn btn-primary pull-right h2">Novo</a>
-			        <a href="hotelcontroller.do?action=list" class="btn btn-primary pull-right h2">Listar</a>
 			    </div>
 			</div> <!-- /#top -->
 	
@@ -69,7 +68,8 @@
 			                <tr>
 			                    <th>Código</th>
 			                    <th>Nome</th>
-			                    <th>Rua</th>
+			                    <th>Cidade</th>
+			                    <th>Estado</th>
 			                    <th class="actions">Ações</th>
 			                 </tr>
 			            </thead>
@@ -80,8 +80,8 @@
 				                <tr>
 				                    <td>${hotel.codhotel}</td>
 				                    <td>${hotel.nome}</td>
-				                    <td>${hotel.rua}</td>
-				    
+				                    <td>${hotel.cidade}</td>
+				    				<td>${hotel.estado}</td>
 				                    
 				                    <td class="actions">
 				                        <a class="btn btn-success btn-xs" href="hotelcontroller.do?action=view&txtcodhotel=${hotel.codhotel}">Visualizar</a>

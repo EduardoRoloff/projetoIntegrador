@@ -4,23 +4,19 @@ public class EHotel {
 	
 	private long   codhotel;
 	private String nome;
-	private String rua;
-	private String quadra;
-	private String lote;
+	private String cep;
+	private String endereco;
+	private String estado;
+	private String cidade;
 	private String bairro;
 	private String descricao;
 	private int    classificacao;
-	private String numero;
 	private String foto;
 	private int	   qtdquarto;
 	private String tipohotel;
-	private ECidades cidade;
 	private String telefone;
-	private String cep;
 	
-	public EHotel(){
-		cidade = new ECidades();
-	}
+	public EHotel(){}
 
 	public long getCodhotel() {
 		return codhotel;
@@ -38,28 +34,36 @@ public class EHotel {
 		this.nome = nome;
 	}
 
-	public String getRua() {
-		return rua;
+	public String getCep() {
+		return cep;
 	}
 
-	public void setRua(String rua) {
-		this.rua = rua;
+	public void setCep(String cep) {
+		this.cep = cep;
 	}
 
-	public String getQuadra() {
-		return quadra;
+	public String getEndereco() {
+		return endereco;
 	}
 
-	public void setQuadra(String qudra) {
-		this.quadra = qudra;
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
 	}
 
-	public String getLote() {
-		return lote;
+	public String getEstado() {
+		return estado;
 	}
 
-	public void setLote(String lote) {
-		this.lote = lote;
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+
+	public String getCidade() {
+		return cidade;
+	}
+
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
 	}
 
 	public String getBairro() {
@@ -86,14 +90,6 @@ public class EHotel {
 		this.classificacao = classificacao;
 	}
 
-	public String getNumero() {
-		return numero;
-	}
-
-	public void setNumero(String numero) {
-		this.numero = numero;
-	}
-
 	public String getFoto() {
 		return foto;
 	}
@@ -108,14 +104,6 @@ public class EHotel {
 
 	public void setQtdquarto(int qtdquarto) {
 		this.qtdquarto = qtdquarto;
-	}
-
-	public ECidades getCidade() {
-		return cidade;
-	}
-
-	public void setCidade(ECidades cidade) {
-		this.cidade = cidade;
 	}
 
 	public String getTipohotel() {
@@ -134,14 +122,5 @@ public class EHotel {
 		this.telefone = telefone;
 	}
 
-	public String getCep() {
-		return cep;
-	}
-
-	public void setCep(String cep) {
-		this.cep = cep;
-	}
-	
-	
 	
 }

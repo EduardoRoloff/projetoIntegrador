@@ -46,83 +46,60 @@
 						<input type="hidden" name="txtcodhotel" class="form-control" id="campo1" value="${requestScope.hotel.codhotel}" />
 					</div>
 				
-					<div class="form-group col-md-12">
+					<div class="form-group col-md-9">
 						<label for="campo1">Nome do Hotel</label> <input type="text"
 							name="txtnome" class="form-control" id="campo1"
 							value="${requestScope.hotel.nome}" />
 					</div>
-				</div>
-
-				<div class="row">
-
-					<div class="form-group col-md-7">
-						<label for="campo1">Rua</label> <input type="text" name="txtrua"
-							class="form-control" id="campo1"
-							value="${requestScope.hotel.rua}" />
-					</div>
 					
-					<div class="form-group col-md-1">
-						<label for="campo1">Numero</label> <input type="text"
-							name="txtnumero" class="form-control" id="campo1"
-							value="${requestScope.hotel.numero}" />
-					</div>
-
-					<div class="form-group col-md-4">
-						<label for="campo1">Bairro</label> <input type="text"
-							name="txtbairro" class="form-control" id="campo1"
-							value="${requestScope.hotel.bairro}" />
-					</div>
-
-				</div>
-
-				<div class="row">
-					<div class="form-group col-md-1">
-						<label for="campo1">Quadra</label> <input type="text"
-							name="txtquadra" class="form-control" id="campo1"
-							value="${requestScope.hotel.quadra}" />
-					</div>
-
-					<div class="form-group col-md-1">
-						<label for="campo1">Lote</label> <input type="text" name="txtlote"
-							class="form-control" id="campo1"
-							value="${requestScope.hotel.lote}" />
-					</div>
-
 					<div class="form-group col-md-3">
 						<label for="campo1">Telefone</label> <input type="text"
 							name="txttelefone" class="form-control" id="campo1"
 							value="${requestScope.hotel.telefone}" />
 					</div>
+				</div>
 
+				<div class="row">
 					<div class="form-group col-md-3">
-						<label for="campo1">CEP</label> <input type="text" name="txtcep"
-							class="form-control" id="campo1"
+						<label for="campo1">CEP</label> <input type="text"
+							name="txtcep" class="form-control" id="cep"
 							value="${requestScope.hotel.cep}" />
 					</div>
-
-					<div class="form-group col-md-2">
-						<label for="campo1">Estado</label> <input type="text"
-							name="txtestado" class="form-control" id="campo1"
-							value="" />
-					</div>
-
-					<div class="form-group col-md-2">
-						<label>Cidade</label>
-						<div class="selectContainer">
-							<select class="form-control" name="size">
-								<option value="">Choose a size</option>
-								<option value="s">Small (S)</option>
-								<option value="m">Medium (M)</option>
-								<option value="l">Large (L)</option>
-								<option value="xl">Extra large (XL)</option>
-							</select>
-						</div>
+					
+					<div class="form-group col-md-9">
+						<label for="campo1">Endereço</label> <input type="text" name="txtendereco"
+							class="form-control" id="endereco"
+							value="${requestScope.hotel.endereco}" />
 					</div>
 				</div>
 
 				<div class="row">
+					<div class="form-group col-md-6">
+						<label for="campo1">Bairro</label> <input type="text"
+							name="txtbairro" class="form-control" id="bairro"
+							value="${requestScope.hotel.bairro}" />
+					</div>
+
+					<div class="form-group col-md-3">
+						<label for="campo1">Cidade</label> <input type="text" name="txtcidade"
+							class="form-control" id="cidade"
+							value="${requestScope.hotel.cidade}" />
+					</div>
+
+					<div class="form-group col-md-3">
+						<label for="campo1">Estado</label> <input type="text"
+							name="txtestado" class="form-control" id="estado"
+							value="${requestScope.hotel.estado}" />
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="form-group col-md-4">
+						<!-- preencher o espaço -->	
+					</div>
+					
 					<div class="form-group col-md-1">
-						<label for="campo1">T quarto</label>
+						<label for="campo1">Quartos</label>
 						 <input type="text" name="txtqtdquarto" class="form-control" id="campo1" value="${requestScope.hotel.qtdquarto}" />
 					</div>
 
@@ -130,7 +107,7 @@
 						<label>Tipo</label>
 						<div class="selectContainer">
 							<select class="form-control" name="txttipohotel">
-								<option value="">Selecione...</option>
+								<option value="${hotel.tipohotel}">${hotel.tipohotel }</option>
 								<option value="Matriz">Matriz</option>
 								<option value="Filial">Filial</option>
 							</select>
@@ -141,7 +118,7 @@
 						<label>Classificação</label>
 						<div class="selectContainer">
 							<select class="form-control" name="txtclassificacao">
-								<option value="">...</option>
+								<option value="${hotel.classificacao }">${hotel.classificacao }</option>
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -149,7 +126,7 @@
 						</div>
 					</div>
 					
-					<div class="form-group col-md-8">
+					<div class="form-group col-md-4">
 						<!-- preencher o espaço -->	
 					</div>
 				</div>
@@ -185,5 +162,6 @@
 
 	<script src="lib/jquery/jquery.min.js"></script>
 	<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/endereco.js"></script>
 </body>
 </html>
