@@ -15,7 +15,18 @@ public class EHotel {
 	private int	   qtdquarto;
 	private String tipohotel;
 	private String telefone;
+	private double precoDiaria;
 	
+
+
+	public double getPrecoDiaria() {
+		return precoDiaria;
+	}
+
+	public void setPrecoDiaria(double precoDiaria) {
+		this.precoDiaria = precoDiaria;
+	}
+
 	public EHotel(){}
 
 	public long getCodhotel() {

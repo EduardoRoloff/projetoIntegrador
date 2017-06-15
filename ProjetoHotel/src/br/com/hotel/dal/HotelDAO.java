@@ -9,7 +9,7 @@ import java.util.Iterator;
 import java.util.List;
 
 import br.com.hotel.model.EHotel;
-import br.com.senai.util.Conexao;
+import br.com.hotel.util.Conexao;
 
 public class HotelDAO {
 
@@ -216,5 +216,34 @@ public class HotelDAO {
 			e.printStackTrace();
 		}
 		return hotel;
-	}// fim do metodo pesquisarClienteCod
+	}
+	
+	public List<EHotel> pesquisarHotelCidade(String destino) {
+		String sql = "SELECT * FROM hotel WHERE lower(cidade) LIKE ?";
+		List<EHotel> lista = new ArrayList<>();
+		try {
+			PreparedStatement ps = connection.prepareStatement(sql);
+			ps.setString(1, '%'+destino+'%');
+			ResultSet rs = ps.executeQuery();
+			while(rs.next()) {
+				EHotel h = new EHotel();
+				h.setCodhotel(rs.getLong("codhotel"));
+				h.setNome(rs.getString("nome"));
+				h.setEndereco(rs.getString("endereco"));
+				h.setBairro(rs.getString("bairro"));
+				h.setCidade(rs.getString("cidade"));
+				h.setCep(rs.getString("cep"));
+				h.setEstado(rs.getString("estado"));
+				h.setDescricao(rs.getString("descricao"));
+				h.setClassificacao(rs.getInt("classificacao"));
+				h.setPrecoDiaria(rs.getDouble("precoDiaria"));
+				h.setFoto(rs.getString("foto"));
+				lista.add(h);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return lista;
+	}
 }

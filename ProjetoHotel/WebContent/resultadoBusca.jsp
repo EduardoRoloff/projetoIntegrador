@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,7 +10,7 @@
 	<meta name="description" content="Creative One Page Parallax Template">
 	<meta name="keywords" content="Creative, Onepage, Parallax, HTML5, Bootstrap, Popular, custom, personal, portfolio" />
 	<meta name="author" content="">	
-	<title>Busca</title>
+	<title>Resultado - Busca</title>
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/prettyPhoto.css" rel="stylesheet">
 	<link href="css/font-awesome.min.css" rel="stylesheet">
@@ -16,6 +18,7 @@
 	<link href="css/main.css" rel="stylesheet">
 	<link href="css/responsive.css" rel="stylesheet">
 	<link rel="shortcut icon" href="images/ico/hotelcomlogo.png">
+    <link rel="stylesheet" type="text/css" href="css/resultadoBusca.css"/>
 </head>
 <body>
 	<div class="preloader">
@@ -32,24 +35,27 @@
 		</div>
 	</div>	
     <jsp:include page="menuPagina.jsp"/>
-
     <section>
-        <div>
-            <ol>
-                <li>
-                    <article>
-                        <div class="">
-                            <h3>Hotel A</h3>
-                        </div>          
-                        <div class="">
-                            
-                        </div>
-                    </article>
-                </li>
-            </ol>
+    <!-- Com divs -->
+        <div id="area-principal">
+        	<c:forEach items="${hoteis}" var="hotel">
+            	<div id="listagem">
+           			<h3><c:out value="${hotel.nome}"/></h3>
+                	<img class="imagemRedor" src="<c:url value="${hotel.foto}"/>"/>
+                	<span><c:out value="${hotel.endereco}"/>,</span> 
+                	<span><c:out value="${hotel.bairro}"/>,</span>
+                	<span><c:out value="${hotel.cidade}"/>,</span>
+                	<span><c:out value="${hotel.cep}"/>,</span>
+                	<span><c:out value="${hotel.estado}"/>.</span><br><br><br>
+                	<span><c:out value="${hotel.descricao}"/></span><br><br><br>
+                	<span>Classificação: <c:out value="${hotel.classificacao}"/></span><br><br><br>
+                	<span id="negrito">Preço: R$ <c:out value="${hotel.precoDiaria}"/></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                	<a href="HotelController?action=Selecionar&codhotel=<c:out value="${hotel.codhotel}"/>" class="btn btn-default">SELECIONAR</a>
+            	</div>
+            </c:forEach>
         </div>
+     <!-- Fecha com divs -->       
     </section>
-
 	<footer id="footer">
 		<div class="container">
 			<div class="text-center">

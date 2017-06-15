@@ -22,7 +22,7 @@
 </head>
 <body class="login-page">
 	<div>
-<%-- 	  <jsp:include page="menuPagina.jsp"/> --%>
+	  <jsp:include page="menuPagina.jsp"/>
 <!-- 	  <div class="login-block"> -->
 <!-- 		 <form method="post" action="LoginController"> -->
 <!-- 			<h1>Fazer Login</h1>	  -->
