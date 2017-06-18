@@ -4,6 +4,7 @@ public class ETipoQuarto {
 
 	private long codtipo;
 	private String nome;
+	private int quantidadequarto;
 	private int quantidadecama;
 	private int quantidadepessoa;
 	private double valordiaria;
@@ -12,6 +13,14 @@ public class ETipoQuarto {
 	
 	public ETipoQuarto(){
 		hotel = new EHotel();
+	}
+
+	public int getQuantidadequarto() {
+		return quantidadequarto;
+	}
+
+	public void setQuantidadequarto(int quantidadequarto) {
+		this.quantidadequarto = quantidadequarto;
 	}
 
 	public long getCodtipo() {

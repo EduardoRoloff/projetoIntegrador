@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<!DOCTYPE html ">
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -9,7 +9,7 @@
 <!-- CSS do bootstrap -->
 <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css"/>
 <!-- CSS personalizado -->
-<link rel="stylesheet" href="lib/css-personalizado/newcadastroQuarto.css"/>
+<link rel="stylesheet" href="lib/css-personalizado/newcadastroTipoQuarto.css"/>
 </head>
 
 <body>
@@ -33,11 +33,12 @@
             </fieldset>
             <fieldset id="tp-quarto">
                 <legend>Tipo de Quarto</legend>
-                   <p>Nome do Tipo:<input type="text" name="txtnome" id="id-nome"/></p>   
-                   <p>Quantidade de Cama:<input type="number" name="txtqtcama" id="id-qtcama" min="0" max="99" value="0"/></p>
-                    <p>Quantidade de Pessoas:<input type="number" name="txtqtpessoas" id="id-qtpessoass" min="0" max="99" value="0"/></p>
-                    <p>Valor Diária:<input type="text" name="txtvalor" id="id-valor"/></p>
-                <p>Descrição:<textarea name="txtdescricao" id="id-descricao"></textarea></p>
+                <p>Nome do Tipo:<input type="text" name="txtnome" id="id-nome"/></p>
+                <label for="id-qtquarto">Quantidade de Quartos:<input type="number" name="txtqtquarto" id="id-qtquarto" min="0" max="500" value="0"></label>      
+                <p>Quantidade de Cama:<input type="number" name="txtqtcama" id="id-qtcama" min="0" max="99" value="0"/></p>
+                <p>Quantidade de Pessoas:<input type="number" name="txtqtpessoas" id="id-qtpessoass" min="0" max="99" value="0"/></p>
+                <p>Valor Diária:<input type="text" name="txtvalor" id="id-valor"/></p>
+                <p>Detalhe do Quarto:<textarea name="txtdescricao" id="id-descricao"></textarea></p>
             </fieldset>  
             <hr />
 				<div id="actions" class="row">

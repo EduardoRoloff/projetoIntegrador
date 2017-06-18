@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.hotel.bll.strategy.InterfaceStrategyTipoQuarto;
 import br.com.hotel.bll.strategy.EnumTipoQuarto;
 import br.com.hotel.dal.HotelDAO;
-import br.com.hotel.dal.QuartoDAO;
+import br.com.hotel.dal.TipoQuartoDAO;
 
 /**
  * Servlet implementation class QuartoController
@@ -21,7 +21,7 @@ import br.com.hotel.dal.QuartoDAO;
 public class TipoQuartoController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static final String HOME = "index.jsp";
-    QuartoDAO quartodao = new QuartoDAO();
+    TipoQuartoDAO quartodao = new TipoQuartoDAO();
     HotelDAO hoteldao = new HotelDAO();
     /**
      * @see HttpServlet#HttpServlet()
