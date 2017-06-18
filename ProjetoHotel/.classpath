@@ -6,8 +6,8 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v8.5"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry kind="lib" path="C:/Program Files/jstl.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/postgresql-8.3-603.jdbc4.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/standard.jar"/>
+	<classpathentry kind="lib" path="C:/Users/paulojorge/Documents/Repositorio-git/projetoIntegrador/ProjetoHotel/WebContent/WEB-INF/lib/jstl.jar"/>
+	<classpathentry kind="lib" path="C:/Users/paulojorge/Documents/Repositorio-git/projetoIntegrador/ProjetoHotel/WebContent/WEB-INF/lib/postgresql-8.3-603.jdbc4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/paulojorge/Documents/Repositorio-git/projetoIntegrador/ProjetoHotel/WebContent/WEB-INF/lib/standard.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -12,14 +12,10 @@
 
 <!-- CSS do bootstrap -->
 <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
-
-<!-- http://fontawesome.io/ -->
-
 <!-- CSS personalizado -->
 <link rel="stylesheet" href="lib/css-personalizado/logado-admsystem.css">
 <script type="text/javascript" src="js/validaformhotel.js"></script>
 </head>
-
 
 <body>
 	<header class="navbar navbar-inverse navbar-fixed-top">

@@ -87,6 +87,7 @@
 				                        <a class="btn btn-success btn-xs" href="hotelcontroller.do?action=view&txtcodhotel=${hotel.codhotel}">Visualizar</a>
 				                        <a class="btn btn-warning btn-xs" href="hotelcontroller.do?action=update&txtcodhotel=${hotel.codhotel}">Editar</a>
 				                        <a class="btn btn-danger btn-xs"  href="hotelcontroller.do?action=del&txtcodhotel=${hotel.codhotel}">Excluir</a>
+				                        <a class="btn btn-success btn-xs" href="quartocontroller.do?action=CADASTRAR&txtcodhotel=${hotel.codhotel}">+TQuarto</a>
 				                    </td>
 				                </tr>
 				 
