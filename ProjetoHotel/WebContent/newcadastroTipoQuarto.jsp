@@ -17,20 +17,25 @@
 		<!-- barra de navegacao do topo -->
 		<c:import url="includes/menuAdm.jsp"></c:import>
 	</header>
-	<div id="form-quarto">
+	<div id="form-quarto" class="container-fluid">
         <section id="cont-sessao">
             <header id="cabecalho-sessao">
                 <h3>Formulário de Cadastro</h3>
             </header>
             
         <form method="post" id="form-tpquarto" action="quartocontroller.do"> 
-            <fieldset id="info-hotel">
-                <legend>Hotel</legend>
-                <label for="id-hotel">Cód. Hotel</label>
-                <input type="text" name="txtcodhotel" id="id-hotel" value="${hotel.codhotel}" readonly/>
-                <label for="id-nomehotel">Nome do Hotel</label>
-                <input type="text" name="txtnomehotel" id="id-nomehotel" value="${hotel.nome}" readonly/>
-            </fieldset>
+	            <fieldset id="info-hotel">
+	                <legend>Hotel</legend>
+	                <div class="form-group col-md-2">
+		                <label for="id-hotel">Cód. Hotel</label>
+		                <input type="text" name="txtcodhotel" id="id-hotel" value="${hotel.codhotel}" readonly/>
+	                </div>
+	                <div class="form-group col-md-10">
+		                <label for="id-nomehotel">Nome do Hotel</label>
+		                <input type="text" name="txtnomehotel" id="id-nomehotel" value="${hotel.nome}" readonly/>
+	            	</div>
+	            </fieldset>
+         
             <fieldset id="tp-quarto">
                 <legend>Tipo de Quarto</legend>
                 <p>Nome do Tipo:<input type="text" name="txtnome" id="id-nome"/></p>
