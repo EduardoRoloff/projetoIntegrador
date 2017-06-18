@@ -18,7 +18,7 @@ import br.com.hotel.dal.QuartoDAO;
  * Servlet implementation class QuartoController
  */
 @WebServlet("/quartocontroller.do")
-public class QuartoController extends HttpServlet {
+public class TipoQuartoController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static final String HOME = "index.jsp";
     QuartoDAO quartodao = new QuartoDAO();
@@ -26,7 +26,7 @@ public class QuartoController extends HttpServlet {
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public QuartoController() {
+    public TipoQuartoController() {
         super();
     }
 	/**
