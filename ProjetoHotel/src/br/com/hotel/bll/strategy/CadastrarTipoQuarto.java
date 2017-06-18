@@ -4,10 +4,10 @@ import javax.servlet.http.HttpServletRequest;
 
 import br.com.hotel.dal.HotelDAO;
 
-public class CadastrarQuarto implements InterfaceStrategyQuarto{
-	private static final String CADASTRARTIPOQUARTO = "/newcadastroQuarto.jsp";
+public class CadastrarTipoQuarto implements InterfaceStrategyTipoQuarto{
+	private static final String CADASTRARTIPOQUARTO = "newcadastroTipoQuarto.jsp";
 	HotelDAO hoteldao = new HotelDAO();
-	public CadastrarQuarto(){}
+	public CadastrarTipoQuarto(){}
 	
 	@Override
 	public String acaoQuarto(HttpServletRequest request) {

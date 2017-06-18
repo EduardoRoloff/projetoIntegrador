@@ -5,14 +5,14 @@ import static junit.framework.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import br.com.hotel.bll.strategy.CadastrarQuarto;
+import br.com.hotel.bll.strategy.CadastrarTipoQuarto;
 
 public class CadastrarTipoQuartoTest {
 
-	CadastrarQuarto cadQuarto;
+	CadastrarTipoQuarto cadQuarto;
 	@Before
 	public void setUp() throws Exception {
-		cadQuarto = new CadastrarQuarto();
+		cadQuarto = new CadastrarTipoQuarto();
 	}
 
 	@Test

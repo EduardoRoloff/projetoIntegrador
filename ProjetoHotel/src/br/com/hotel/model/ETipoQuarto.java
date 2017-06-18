@@ -1,6 +1,6 @@
 package br.com.hotel.model;
 
-public class EQuarto {
+public class ETipoQuarto {
 
 	private long codtipo;
 	private String nome;
@@ -10,7 +10,7 @@ public class EQuarto {
 	private String descricao;
 	private EHotel hotel;
 	
-	public EQuarto(){
+	public ETipoQuarto(){
 		hotel = new EHotel();
 	}
 

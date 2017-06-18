@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import br.com.hotel.model.EQuarto;
+import br.com.hotel.model.ETipoQuarto;
 import br.com.hotel.util.Conexao;
 
 public class QuartoDAO {
@@ -14,7 +14,7 @@ public class QuartoDAO {
 		connection = Conexao.getConnection();
 	}
 	
-	public void cadastrar(EQuarto quarto){
+	public void cadastrar(ETipoQuarto quarto){
 		String sql = "INSERT INTO tipoquarto (nome, quantidadecama, quantidadepessoa, valordiaria, descricao, codhotel) values (?,?,?,?,?,?)";
 		try{
 			PreparedStatement pst = connection.prepareStatement(sql);

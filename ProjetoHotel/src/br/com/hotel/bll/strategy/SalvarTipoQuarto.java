@@ -3,12 +3,12 @@ package br.com.hotel.bll.strategy;
 import javax.servlet.http.HttpServletRequest;
 
 import br.com.hotel.dal.QuartoDAO;
-import br.com.hotel.model.EQuarto;
+import br.com.hotel.model.ETipoQuarto;
 
-public class SalvarTipoQuarto implements InterfaceStrategyQuarto{
+public class SalvarTipoQuarto implements InterfaceStrategyTipoQuarto{
 
-	private static final String HOME = "/logado-admsystem.jsp";
-	EQuarto tipoQuarto = new EQuarto();
+	private static final String HOME = "hotelcontroller.do?action=list";
+	ETipoQuarto tipoQuarto = new ETipoQuarto();
 	QuartoDAO quartoDao = new QuartoDAO();
 	
 	public SalvarTipoQuarto() {
@@ -25,5 +25,4 @@ public class SalvarTipoQuarto implements InterfaceStrategyQuarto{
 		quartoDao.cadastrar(tipoQuarto);
 		return HOME;
 	}
-
 }
