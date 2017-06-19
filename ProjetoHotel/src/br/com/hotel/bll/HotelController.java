@@ -17,6 +17,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.swing.JOptionPane;
 
+import br.com.hotel.bll.strategy.EnumHotel;
+import br.com.hotel.bll.strategy.EnumTipoQuarto;
+import br.com.hotel.bll.strategy.InterfaceStrategyTipoQuarto;
 import br.com.hotel.dal.HotelDAO;
 import br.com.hotel.model.EHotel;
 
@@ -33,7 +36,6 @@ public class HotelController extends HttpServlet {
 	 */
 	public HotelController() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	/**
@@ -98,6 +100,18 @@ public class HotelController extends HttpServlet {
 	 *      response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String forward = "";
+		String funcao = request.getParameter("btnacao");
+		
+		EnumHotel requisicao = EnumHotel.valueOf(funcao);
+		InterfaceStrategyTipoQuarto strategy = requisicao.obterAcao();
+		
+		forward = strategy.acaoQuarto(request);
+		RequestDispatcher view = request.getRequestDispatcher(forward);
+	    view.forward(request, response);
+		
+		
+		/*
 		
 		if(request.getParameter("botao").equalsIgnoreCase("buscar")){
 			double valorDiaria;

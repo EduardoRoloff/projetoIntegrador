@@ -140,7 +140,7 @@
 				<div id="actions" class="row">
 
 					<div class="col-md-12">
-						<button type="submit" name="txtsalvar" value="salvar" class="btn btn-primary" onclick= "validarform();">Salvar</button>
+						<button type="submit" name="btnacao" value="CADASTRAR" class="btn btn-primary" onclick= "validarform();">Salvar</button>
 						<a href="hotelcontroller.do?action=list" class="btn btn-default">Cancelar</a>
 					</div>
 

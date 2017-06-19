@@ -17,6 +17,8 @@ public class CadastrarTipoQuartoTest {
 
 	@Test
 	public void testAcaoQuarto() {
+		
+		
 		String caminho = "/newcadastroQuarto.jsp";
 		//assertEquals(caminho, cadQuarto.acaoQuarto());
 	}

@@ -1,25 +1,18 @@
 package br.com.hotel.bll.strategy;
 
-public enum EnumTipoQuarto {
-	
+public enum EnumHotel {
+
+	BUSCAR {
+		@Override
+		public InterfaceStrategyTipoQuarto obterAcao() {
+			return new BuscarHotelDiaria();
+		}
+	},
 	CADASTRAR {
 		@Override
 		public InterfaceStrategyTipoQuarto obterAcao() {
-			return new CadastrarTipoQuarto();
-		}
-	},
-	ATUALIZAR {
-		@Override
-		public InterfaceStrategyTipoQuarto obterAcao() {
-			return null;
-		}
-	},
-	SALVAR {
-		@Override
-		public InterfaceStrategyTipoQuarto obterAcao() {
-			return new SalvarTipoQuarto();
+			return new CadastrarHotel();
 		}
 	};
-	
 	public abstract InterfaceStrategyTipoQuarto obterAcao();
 }

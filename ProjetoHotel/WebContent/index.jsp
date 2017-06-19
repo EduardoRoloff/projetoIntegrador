@@ -128,7 +128,7 @@
 		</div>
 		<div class="clear"></div>
 		
-		<button type="submit" class="Submit" name="botao" value="buscar">BUSCAR<i class="fa fa-arrow-right"></i></button>
+		<button type="submit" class="Submit" name="btnacao" value="BUSCAR" >BUSCAR<i class="fa fa-arrow-right"></i></button>
 	</form>
 	<!--formulario-->
 	
