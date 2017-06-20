@@ -49,7 +49,7 @@
 				<div id="actions" class="row">
 					<div class="col-md-12">
 						<button type="submit" name="btnsalvar" value="SALVAR" class="btn btn-primary" onclick= "">Salvar</button>
-						<a href="hotelcontroller.do?action=list" class="btn btn-default">Cancelar</a>
+						<a href="hotelcontroller.do?action=LISTAR" class="btn btn-default">Cancelar</a>
 					</div>
 				</div>
         </form>

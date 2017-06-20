@@ -1,19 +1,22 @@
-package br.com.hotel.bll.strategy;
+package br.com.hotel.bll.pattern.hotel;
+
+import java.io.IOException;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import br.com.hotel.dal.HotelDAO;
 import br.com.hotel.model.EHotel;
 
-public class CadastrarHotel implements InterfaceStrategyTipoQuarto {
-	private static final String CADASTRARHOTEL = "hotelcontroller.do?action=list";
+public class CadastrarHotel implements InterfaceStrategyHotel {
+	private static final String CADASTRARHOTEL = "hotelcontroller.do?action=LISTAR";
 	HotelDAO hdao = new HotelDAO();
 	EHotel hotel = new EHotel();
 	public CadastrarHotel() {
 	}
 	
 	@Override
-	public String acaoQuarto(HttpServletRequest request) {
+	public void acaoStrategy(HttpServletRequest request, HttpServletResponse response) {
 		String id = request.getParameter("txtcodhotel");
 		if(id != ""){
 			hotel.setCodhotel(Long.parseLong(request.getParameter("txtcodhotel")));
@@ -30,6 +33,10 @@ public class CadastrarHotel implements InterfaceStrategyTipoQuarto {
 		hotel.setQtdquarto(Integer.parseInt(request.getParameter("txtqtdquarto")));
 		hotel.setTipohotel(request.getParameter("txttipohotel"));
 		hdao.salvar(hotel);
-		return CADASTRARHOTEL;
+		try {
+			response.sendRedirect(CADASTRARHOTEL);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 }

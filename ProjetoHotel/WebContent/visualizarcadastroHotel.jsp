@@ -116,7 +116,7 @@
 				<div id="actions" class="row">
 
 					<div class="col-md-12">
-						<a href="hotelcontroller.do?action=list" class="btn btn-default">Voltar</a>
+						<a href="hotelcontroller.do?action=LISTAR" class="btn btn-default">Voltar</a>
 					</div>
 
 				</div>

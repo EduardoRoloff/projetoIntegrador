@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.com.hotel.bll.strategy.InterfaceStrategyTipoQuarto;
-import br.com.hotel.bll.strategy.EnumTipoQuarto;
+import br.com.hotel.bll.pattern.tipoquarto.EnumFactoryTipoQuarto;
+import br.com.hotel.bll.pattern.tipoquarto.InterfaceStrategyTipoQuarto;
 import br.com.hotel.dal.HotelDAO;
 import br.com.hotel.dal.TipoQuartoDAO;
 
@@ -36,10 +36,10 @@ public class TipoQuartoController extends HttpServlet {
 		String forward = "";
 		String funcao = request.getParameter("action");
 		
-		EnumTipoQuarto requisicao = EnumTipoQuarto.valueOf(funcao);
+		EnumFactoryTipoQuarto requisicao = EnumFactoryTipoQuarto.valueOf(funcao);
 		InterfaceStrategyTipoQuarto strategy = requisicao.obterAcao();
 		
-		forward = strategy.acaoQuarto(request);
+		forward = strategy.acaoStrategy(request);
 		RequestDispatcher view = request.getRequestDispatcher(forward);
 	    view.forward(request, response);
 	}
@@ -50,10 +50,10 @@ public class TipoQuartoController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String funcao = request.getParameter("btnsalvar");
 		
-		EnumTipoQuarto requisicao = EnumTipoQuarto.valueOf(funcao);
+		EnumFactoryTipoQuarto requisicao = EnumFactoryTipoQuarto.valueOf(funcao);
 		InterfaceStrategyTipoQuarto strategy = requisicao.obterAcao();
 		
-		response.sendRedirect(strategy.acaoQuarto(request));
+		response.sendRedirect(strategy.acaoStrategy(request));
 	}
 
 }

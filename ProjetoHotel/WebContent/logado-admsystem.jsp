@@ -54,7 +54,7 @@
 			    </div>
 			 </form>
 			    <div class="col-md-3">
-			        <a href="hotelcontroller.do?action=new" class="btn btn-primary pull-right h2">Novo</a>
+			        <a href="hotelcontroller.do?action=NOVO" class="btn btn-primary pull-right h2">Novo</a>
 			    </div>
 			</div> <!-- /#top -->
 	
@@ -84,9 +84,9 @@
 				    				<td>${hotel.estado}</td>
 				                    
 				                    <td class="actions">
-				                        <a class="btn btn-success btn-xs" href="hotelcontroller.do?action=view&txtcodhotel=${hotel.codhotel}">Visualizar</a>
-				                        <a class="btn btn-warning btn-xs" href="hotelcontroller.do?action=update&txtcodhotel=${hotel.codhotel}">Editar</a>
-				                        <a class="btn btn-danger btn-xs"  href="hotelcontroller.do?action=del&txtcodhotel=${hotel.codhotel}">Excluir</a>
+				                        <a class="btn btn-success btn-xs" href="hotelcontroller.do?action=VISUALIZAR&txtcodhotel=${hotel.codhotel}">Visualizar</a>
+				                        <a class="btn btn-warning btn-xs" href="hotelcontroller.do?action=ATUALIZAR&txtcodhotel=${hotel.codhotel}">Editar</a>
+				                        <a class="btn btn-danger btn-xs"  href="hotelcontroller.do?action=DELETAR&txtcodhotel=${hotel.codhotel}">Excluir</a>
 				                        <a class="btn btn-success btn-xs" href="quartocontroller.do?action=CADASTRAR&txtcodhotel=${hotel.codhotel}">+TQuarto</a>
 				                    </td>
 				                </tr>

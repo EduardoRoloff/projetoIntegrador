@@ -5,7 +5,7 @@ import static junit.framework.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import br.com.hotel.bll.strategy.CadastrarTipoQuarto;
+import br.com.hotel.bll.pattern.tipoquarto.CadastrarTipoQuarto;
 
 public class CadastrarTipoQuartoTest {
 

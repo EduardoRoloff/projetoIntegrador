@@ -1,4 +1,4 @@
-package br.com.hotel.bll.strategy;
+package br.com.hotel.bll.pattern.tipoquarto;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -15,7 +15,7 @@ public class SalvarTipoQuarto implements InterfaceStrategyTipoQuarto{
 	}
 	
 	@Override
-	public String acaoQuarto(HttpServletRequest request){
+	public String acaoStrategy(HttpServletRequest request){
 		tipoQuarto.setNome(request.getParameter("txtnome"));
 		tipoQuarto.setQuantidadequarto(Integer.parseInt(request.getParameter("txtqtquarto")));
 		tipoQuarto.setQuantidadecama(Integer.parseInt(request.getParameter("txtqtcama")));

@@ -1,4 +1,4 @@
-package br.com.hotel.bll.strategy;
+package br.com.hotel.bll.pattern.tipoquarto;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -10,7 +10,7 @@ public class CadastrarTipoQuarto implements InterfaceStrategyTipoQuarto{
 	public CadastrarTipoQuarto(){}
 	
 	@Override
-	public String acaoQuarto(HttpServletRequest request) {
+	public String acaoStrategy(HttpServletRequest request) {
 		String codhotel = request.getParameter("txtcodhotel");
 		request.setAttribute("hotel", hoteldao.pesquisarHotelCod(Long.parseLong(codhotel)));
 		return CADASTRARTIPOQUARTO;

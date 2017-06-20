@@ -1,6 +1,6 @@
-package br.com.hotel.bll.strategy;
+package br.com.hotel.bll.pattern.tipoquarto;
 
-public enum EnumTipoQuarto {
+public enum EnumFactoryTipoQuarto {
 	
 	CADASTRAR {
 		@Override

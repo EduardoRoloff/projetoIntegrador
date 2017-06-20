@@ -1,25 +1,28 @@
-package br.com.hotel.bll.strategy;
+package br.com.hotel.bll.pattern.hotel;
 
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.swing.JOptionPane;
 
 import br.com.hotel.dal.HotelDAO;
 import br.com.hotel.model.EHotel;
 
-public class BuscarHotelDiaria implements InterfaceStrategyTipoQuarto{
-	private static final String BUSCARHOTEL = "newcadastroTipoQuarto.jsp";
+public class BuscarHotelDiaria implements InterfaceStrategyHotel{
+	private static final String BUSCARHOTEL = "resultadoBusca.jsp";
 	HotelDAO persistencia = new HotelDAO();
-	
 	public BuscarHotelDiaria() {
 	}
 
 	@Override
-	public String acaoQuarto(HttpServletRequest request) {
+	public void acaoStrategy(HttpServletRequest request, HttpServletResponse response) {
 		double valorDiaria;
 		String entrada = request.getParameter("CheckIn");
 		String vetorEntrada[] = entrada.split("-");
@@ -38,10 +41,10 @@ public class BuscarHotelDiaria implements InterfaceStrategyTipoQuarto{
 				System.out.println("Valor diarias: " + lista.get(i).getPrecoDiaria());
 			}
 			request.setAttribute("hoteis", lista);
+			RequestDispatcher view = request.getRequestDispatcher(BUSCARHOTEL);
+			view.forward(request, response);
 		} catch (Exception e){
 			JOptionPane.showMessageDialog(null, e.getMessage());
 		}
-		return BUSCARHOTEL;
 	}
-
 }
