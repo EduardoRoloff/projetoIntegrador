@@ -9,26 +9,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Adminstração</title>
-
 	<!-- CSS do bootstrap -->
 	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
-	
-	<!-- http://fontawesome.io/ -->
-	
 	<!-- CSS personalizado -->
 	<link rel="stylesheet" href="lib/css-personalizado/logado-admsystem.css">
 	<link href="css/style.css" rel="stylesheet">
-
 </head>
-
 
 <body>
 	<header class="navbar navbar-inverse navbar-fixed-top">
-		<!-- barra de navegacao do topo -->
-		
 			<c:import url="includes/menuAdm.jsp"></c:import>
-		
-		<!-- fim navbar  -->
 	</header>
 	
 	<section>
