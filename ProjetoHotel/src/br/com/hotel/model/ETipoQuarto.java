@@ -9,8 +9,17 @@ public class ETipoQuarto {
 	private int quantidadepessoa;
 	private double valordiaria;
 	private String descricao;
+	private String foto;
 	private EHotel hotel;
 	
+	public String getFoto() {
+		return foto;
+	}
+
+	public void setFoto(String foto) {
+		this.foto = foto;
+	}
+
 	public ETipoQuarto(){
 		hotel = new EHotel();
 	}
