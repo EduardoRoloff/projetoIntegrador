@@ -19,7 +19,15 @@ public enum EnumFactoryTipoQuarto {
 		public InterfaceStrategyTipoQuarto obterAcao() {
 			return new SalvarTipoQuarto();
 		}
+	},
+	SELECIONAR{
+		@Override
+		public InterfaceStrategyTipoQuarto obterAcao() {
+			// TODO Auto-generated method stub
+			return new ListarQuartoBusca();
+		}
 	};
+	
 	
 	public abstract InterfaceStrategyTipoQuarto obterAcao();
 }

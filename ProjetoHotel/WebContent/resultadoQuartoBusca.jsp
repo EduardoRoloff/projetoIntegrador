@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    
+
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -10,7 +10,7 @@
 	<meta name="description" content="Creative One Page Parallax Template">
 	<meta name="keywords" content="Creative, Onepage, Parallax, HTML5, Bootstrap, Popular, custom, personal, portfolio" />
 	<meta name="author" content="">	
-	<title>Resultado - Busca Hotel</title>
+	<title>Listagem - Quarto</title>
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/prettyPhoto.css" rel="stylesheet">
 	<link href="css/font-awesome.min.css" rel="stylesheet">
@@ -38,18 +38,16 @@
     <section>
     <!-- Com divs -->
         <div id="area-principal">
-        	<c:forEach items="${hoteis}" var="hotel">
+        	<c:forEach items="${quartos}" var="quarto">
             	<div id="listagem">
-           			<h3><c:out value="${hotel.nome}"/></h3>
-                	<img class="imagemRedor" src="<c:url value="${hotel.foto}"/>"/>
-                	<span><c:out value="${hotel.endereco}"/>,</span> 
-                	<span><c:out value="${hotel.bairro}"/>,</span>
-                	<span><c:out value="${hotel.cidade}"/>,</span>
-                	<span><c:out value="${hotel.cep}"/>,</span>
-                	<span><c:out value="${hotel.estado}"/>.</span><br><br><br>
-                	<span><c:out value="${hotel.descricao}"/></span><br><br><br>
-                	<span>Classificação: <c:out value="${hotel.classificacao}"/></span><br><br><br>
-                	<a href="quartocontroller.do?action=SELECIONAR&codhotel=${hotel.codhotel}&qtdDias=${hotel.qtdDias}" class="btn btn-default">SELECIONAR</a>
+           			<h3><c:out value="${quarto.nome}"/></h3>
+           			<h3><c:out value="${quarto.hotel.codhotel}"/></h3>
+                	<img class="imagemRedor" src="<c:url value="${quarto.foto}"/>"/>
+                	<span>Descrição: <c:out value="${quarto.descricao}"/>;</span><br><br><br>
+                	<span>Quantidade cama: <c:out value="${quarto.quantidadecama}"/>;</span><br><br><br>
+                	<span>Quantidade pessoas: <c:out value="${quarto.quantidadepessoa}"/>;</span><br><br><br>
+                	<span id="negrito">Valor: R$ <c:out value="${quarto.valordiaria}"/></span>&nbsp&nbsp&nbsp&nbsp
+                	<a href="locacaocontroller?action=VISUALIZAR&codhotel=${quarto.hotel.codhotel}&codtipo=${quarto.codtipo}&valorDiaria=${quarto.valordiaria}" class="btn btn-default">EFETUAR LOCACAO</a>
             	</div>
             </c:forEach>
         </div>

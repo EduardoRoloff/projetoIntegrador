@@ -108,26 +108,7 @@
 				</div>
 			</div>
 		</div>
-
-		<div class="group-form column-left">
-			<label>Quartos</label>
-				<input class="tamanhoQuartos" type="number" min="1" max="10" step="1" name="qtdQuartos" value="" placeholder="Nº quartos"
-				required-message="Especifique o número de quartos" required />
-		</div>
-
-		<div class="group-form column-left">
-			<label for="aldutos">Adultos</label>
-			<input type="number" name="adultos" min="1" max="10" step="1" placeholder="Nº de Adultos"
-			required required-message="Espeficique o quantidade de Adultos">
-		</div>
-
-		<div class="group-form column-left">
-			<label for="criancas">Crianças</label>
-			<input type="number" name="criancas" min="0" max="10" step="1" placeholder="Nº de Crianças"
-			required-message="Especifique a quantidade de crianças">
-		</div>
 		<div class="clear"></div>
-		
 		<button type="submit" class="Submit" name="btnacao" value="BUSCAR" >BUSCAR<i class="fa fa-arrow-right"></i></button>
 	</form>
 	<!--formulario-->
