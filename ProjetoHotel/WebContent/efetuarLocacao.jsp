@@ -45,11 +45,11 @@
 								<label>Código de Segurança:</label>
 								<input type="text" id="codigoseguranca" name="codigoseguranca" required/><br>
 								<label>Data mês Vencimento do Cartão:</label>
-								<input type="number" name="quantity" min="1" max="12" required/>
+								<input type="number" name="mesvencimento" min="1" max="12" required/>
 								<label>Data ano Vencimento do Cartão:</label>
-								<input type="number" name="quantity" min="2017" max="2037" required/>
+								<input type="number" name="anovencimento" min="2017" max="2037" required/>
 							 	<label>CPF:</label>
-							 	<input type="text" id="descricao" name="descricao" value="${detalheslocacao.descricao}"required/><br>
+							 	<input type="text" id="cpf" name="cpf" required/><br>
                 				<button id="input" name="btnacao" type="submit" value="LOCAR" class="btn btn-default">EFETUAR LOCACAO</button>
 							</fieldset>
 							
