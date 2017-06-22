@@ -113,6 +113,7 @@ public class TipoQuartoDAO {
 		}
 		return objeto;
 	}
+<<<<<<< HEAD
 	
 	public Iterator<ETipoQuarto> listarTipoQuartoAdm(long codhotel) {
 		String sql = "SELECT tipoquarto.codtipo AS codquarto,tipoquarto.nome AS nometipoquarto, "
@@ -142,4 +143,6 @@ public class TipoQuartoDAO {
 		return it;
 	}// fim do metodo listarTodos
 	
+=======
+>>>>>>> 8d880813b36575c711dbe3b9f531d348428f440e
 }

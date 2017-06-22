@@ -41,13 +41,12 @@
         	<c:forEach items="${quartos}" var="quarto">
             	<div id="listagem">
            			<h3><c:out value="${quarto.nome}"/></h3>
-           			<h3><c:out value="${quarto.hotel.codhotel}"/></h3>
                 	<img class="imagemRedor" src="<c:url value="${quarto.foto}"/>"/>
                 	<span>Descrição: <c:out value="${quarto.descricao}"/>;</span><br><br><br>
                 	<span>Quantidade cama: <c:out value="${quarto.quantidadecama}"/>;</span><br><br><br>
                 	<span>Quantidade pessoas: <c:out value="${quarto.quantidadepessoa}"/>;</span><br><br><br>
                 	<span id="negrito">Valor: R$ <c:out value="${quarto.valordiaria}"/></span>&nbsp&nbsp&nbsp&nbsp
-                	<a href="locacaocontroller?action=VISUALIZAR&codhotel=${quarto.hotel.codhotel}&codtipo=${quarto.codtipo}&valorDiaria=${quarto.valordiaria}" class="btn btn-default">EFETUAR LOCACAO</a>
+                	<a href="locacaocontroller?action=VISUALIZAR&codhotel=${quarto.hotel.codhotel}&codtipo=${quarto.codtipo}&valorDiaria=${quarto.valordiaria}" class="btn btn-default">VISUALIZAR OFERTA</a>
             	</div>
             </c:forEach>
         </div>

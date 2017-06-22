@@ -33,12 +33,14 @@ public class LocacaoController extends HttpServlet {
 		
 		InterfaceStrategyLocacao strategy = EnumFactoryLocacao.valueOf(funcao).obterAcao();
 		strategy.acaoStrategy(request, response);
-		
 	}
 
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		String funcao = request.getParameter("btnacao");
+		System.out.println("Cheguei no post");
+		InterfaceStrategyLocacao strategy = EnumFactoryLocacao.valueOf(funcao).obterAcao();
+		strategy.acaoStrategy(request, response);
 	}
 
 }

@@ -66,10 +66,9 @@ public class PCliente {
 		PreparedStatement prd = connection.prepareStatement(sql);
 		prd.setString(1, objeto.getEmail());
 		prd.setString(2, objeto.getSenha());
-		ResultSet rs = prd.executeQuery();
-		ECliente cliente = null;
+		ResultSet rs = prd.executeQuery();	
+		ECliente cliente = new ECliente();
 		if(rs.next()){
-				cliente = new ECliente();
 				cliente.setCodcliente(rs.getLong("codcliente"));
 				cliente.setEmail(rs.getString("email"));
 				cliente.setNome(rs.getString("nome"));
@@ -83,7 +82,6 @@ public class PCliente {
 				cliente.setBairro(rs.getString("bairro"));
 				cliente.setCep(rs.getString("cep"));
 		}
-		System.out.println("Entrei no consultar");
 		return cliente;
 	}
 	
