@@ -298,4 +298,38 @@ public class HotelDAO {
 		Iterator<EHotel> it = list.iterator();
 		return it;
 	}// fim do metodo listarTodos
+	
+	public Iterator<EHotel> listarHotelMatriz(){
+		String sql = "SELECT * FROM hotel WHERE tipohotel = 'matriz'";
+		List<EHotel> list = new ArrayList<>();
+		
+		try {
+			PreparedStatement ps = connection.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
+
+			while (rs.next()) {
+				EHotel hotel = new EHotel();
+				hotel.setCodhotel(rs.getLong("codhotel"));
+				hotel.setNome(rs.getString("nome"));
+				hotel.setCep(rs.getString("cep"));
+				hotel.setEndereco(rs.getString("endereco"));
+				hotel.setEstado(rs.getString("estado"));
+				hotel.setCidade(rs.getString("cidade"));
+				hotel.setBairro(rs.getString("bairro"));
+				hotel.setDescricao(rs.getString("descricao"));
+				hotel.setClassificacao(rs.getInt("classificacao"));
+				hotel.setFoto(rs.getString("foto"));
+				hotel.setQtdquarto(rs.getInt("qtdquarto"));
+				hotel.setTipohotel(rs.getString("tipohotel"));
+				hotel.setTelefone(rs.getString("telefone"));
+				list.add(hotel);
+			} 
+			
+			ps.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		Iterator<EHotel> it = list.iterator();
+		return it;
+	}// fim do metodo listarTodos
 }

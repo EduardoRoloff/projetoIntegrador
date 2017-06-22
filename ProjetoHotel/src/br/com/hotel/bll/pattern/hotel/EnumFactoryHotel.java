@@ -42,6 +42,11 @@ public enum EnumFactoryHotel {
 		public InterfaceStrategyHotel obterAcao() {
 			return new ListarFilial();
 		}
+	},LISTARMATRIZ {
+		@Override
+		public InterfaceStrategyHotel obterAcao() {
+			return new ListarMatriz();
+		}
 	};
 	public abstract InterfaceStrategyHotel obterAcao();
 }

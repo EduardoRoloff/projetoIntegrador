@@ -11,17 +11,17 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.hotel.dal.HotelDAO;
 import br.com.hotel.model.EHotel;
 
-public class ListarFilial implements InterfaceStrategyHotel {
-	private static final String DISPATCHER = "listarFilialHotel.jsp";
+public class ListarMatriz implements InterfaceStrategyHotel{
+	private static final String DISPATCHER = "listarMatrizHotel.jsp";
 	HotelDAO hdao = new HotelDAO();
 	EHotel hotel = new EHotel();
-	public ListarFilial() {
+	public ListarMatriz() {
 	}
 
 	@Override
 	public void acaoStrategy(HttpServletRequest request, HttpServletResponse response) {
-		Iterator<EHotel> listHotelMatriz = hdao.listarHotelFilial();
-		request.setAttribute("listHotel", listHotelMatriz);
+		Iterator<EHotel> listHotelFilial = hdao.listarHotelMatriz();
+		request.setAttribute("listHotel", listHotelFilial);
 		RequestDispatcher rd = request.getRequestDispatcher(DISPATCHER);
 		try {
 			rd.forward(request, response);

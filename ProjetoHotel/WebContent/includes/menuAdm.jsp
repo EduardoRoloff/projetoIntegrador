@@ -18,8 +18,8 @@
 			    <li><a href="#">Opções</a>
 			    	<ul>
 			    		<li><a href="hotelcontroller.do?action=LISTARFILIAL">Listar Filial</a></li>
-			    		<li><a href="#">Início</a></li>
-			    		<li><a href="#">Início</a></li>
+			    		<li><a href="hotelcontroller.do?action=LISTARMATRIZ">Listar Matriz</a></li>
+			    		<li><a href="quartocontroller.do?action=LISTARTIPOQUARTO">Listar Tipo Quarto</a></li>
 			    	</ul>
 			    </li>
 			    <li><a href="#">Perfil</a></li>

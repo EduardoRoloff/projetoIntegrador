@@ -108,7 +108,6 @@ public class TipoQuartoDAO {
 				objeto.getHotel().setTelefone(rs.getString("TELEFONE"));
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return objeto;
