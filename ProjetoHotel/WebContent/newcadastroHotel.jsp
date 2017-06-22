@@ -12,14 +12,10 @@
 
 <!-- CSS do bootstrap -->
 <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
-
-<!-- http://fontawesome.io/ -->
-
 <!-- CSS personalizado -->
 <link rel="stylesheet" href="lib/css-personalizado/logado-admsystem.css">
 <script type="text/javascript" src="js/validaformhotel.js"></script>
 </head>
-
 
 <body>
 	<header class="navbar navbar-inverse navbar-fixed-top">
@@ -144,8 +140,8 @@
 				<div id="actions" class="row">
 
 					<div class="col-md-12">
-						<button type="submit" name="txtsalvar" value="salvar" class="btn btn-primary" onclick= "validarform();">Salvar</button>
-						<a href="hotelcontroller.do?action=list" class="btn btn-default">Cancelar</a>
+						<button type="submit" name="btnacao" value="CADASTRAR" class="btn btn-primary" onclick= "validarform();">Salvar</button>
+						<a href="hotelcontroller.do?action=LISTAR" class="btn btn-default">Cancelar</a>
 					</div>
 
 				</div>

@@ -216,5 +216,52 @@ public class HotelDAO {
 			e.printStackTrace();
 		}
 		return hotel;
-	}// fim do metodo pesquisarClienteCod
+	}
+	
+		public List<EHotel> pesquisarHotelCidade(String destino) {
+			String sql = "SELECT DISTINCT h.codhotel as CODIGO, "
+					+ "h.nome as NOME_HOTEL, "
+					+ "h.endereco as ENDERECO,"
+					+ "h.bairro as BAIRRO,"
+					+ "h.cidade as CIDADE,"
+					+ "h.cep as CEP,"
+					+ "h.estado as ESTADO,"
+					+ "h.descricao as DESCRICAO,"
+					+ "h.classificacao as CLASSIFICACAO,"
+					+ "h.precoDiaria as PRECO_DIARIA,"
+					+ "h.foto as FOTO "
+					+ "FROM hotel h "
+					+ "INNER JOIN tipoquarto t "
+					+ "ON h.codhotel = t.codhotel "
+					+ "WHERE cidade ~* ? "
+					+ "AND t.quantidadequarto > 0"
+					+ "ORDER BY h.nome ASC";
+			List<EHotel> lista = new ArrayList<>();
+			try {
+				PreparedStatement ps = connection.prepareStatement(sql);
+				ps.setString(1, destino);
+				ResultSet rs = ps.executeQuery();
+				while(rs.next()) {
+					EHotel h = new EHotel();
+					h.setCodhotel(rs.getLong("CODIGO"));
+					h.setNome(rs.getString("NOME_HOTEL"));
+					h.setEndereco(rs.getString("ENDERECO"));
+					h.setBairro(rs.getString("BAIRRO"));
+					h.setCidade(rs.getString("CIDADE"));
+					h.setCep(rs.getString("CEP"));
+					h.setEstado(rs.getString("ESTADO"));
+					h.setDescricao(rs.getString("DESCRICAO"));
+					h.setClassificacao(rs.getInt("CLASSIFICACAO"));
+					h.setPrecoDiaria(rs.getDouble("PRECO_DIARIA"));
+					h.setFoto(rs.getString("FOTO"));
+					lista.add(h);
+				}
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			return lista;
+		}
+		
+		
 }

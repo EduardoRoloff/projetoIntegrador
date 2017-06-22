@@ -91,65 +91,28 @@
 	</section>
 	<!--/#home-->
 
-
 	<!--formulario 122 a 151-->
-	<form id="panel" name="frmRequestSmart" id="frmRequestSmart" action="">
-
-		<input type="hidden" name="Currency" value="EUR">
-		<input type="hidden" name="xtraTestInfo" value="">
-		<input type="hidden" name="es" value="0">
-
-		<div class="group-form" id="group-form-custom-fields">
-
-		</div>
-
+	<form id="panel" name="frmRequestSmart" id="frmRequestSmart" method="POST" action="hotelcontroller.do">
 		<div class="group-form" id="group-form-destination">
-
 			<div class="destinationRow" destid="1">
 				<div class="destination" style="width:100%; max-width:100%; min-width:100%;">
 					<label>Qual é o seu destino?</label>
 					<div class="auto-suggest-placeholder">
 						<input type="text" name="Destination1Text" id="txtCity1" placeholder="Destino na cidade" value="" autocomplete="off" required>
 					</div>
-					<input type="hidden" name="Destination1" value="">
 				</div>
 				<li role="separator" class="divider"></li>
 				<div class="dates_container">
-					<input id="txtCheckin" name="CheckIn" maxlength="10" type="text" class="datepicker dates" placeholder="Check-in"
-					autocomplete="on" dependentdate="CheckOutDate1" footerlabel="Check-in" required> 
-						
-					<input id="txtCheckout" name="CheckOut" maxlength="10" type="text" class="datepicker dates last" placeholder="Check-out"
-					autocomplete="off" parentdate="CheckInDate1" footerlabel="Check-out" required>
+					<input type="date" name="CheckIn" id="CheckIn">
+					<input type="date" name="CheckOut" id="CheckOut">
 				</div>
 			</div>
-
 		</div>
-
-		<div class="group-form column-left">
-			<label>Quartos</label>
-				<input class="tamanhoQuartos" type="number" min="1" max="10" step="1" id="" name="" value="" placeholder="Nº quartos"
-				required-message="Especifique o número de quartos" required />
-		</div>
-
-		<div class="group-form column-left">
-			<label for="aldutos">Adultos</label>
-			<input type="number" name="aldutos" value="" min="1" max="10" step="1" placeholder="Nº de Adultos"
-			required required-message="Espeficique o quantidade de Adultos">
-		</div>
-
-		<div class="group-form column-left">
-			<label for="criancas">Crianças</label>
-			<input type="number" name="criancas" value="" min="0" max="10" step="1" placeholder="Nº de Crianças"
-			required-message="Especifique a quantidade de crianças">
-		</div>
-
 		<div class="clear"></div>
-
-
-		<button type="submit" class="Submit" name="step1">Buscar <i class="fa fa-arrow-right"></i></button>
+		<button type="submit" class="Submit" name="btnacao" value="BUSCAR" >BUSCAR<i class="fa fa-arrow-right"></i></button>
 	</form>
 	<!--formulario-->
-
+	
 
 	<section id="about-us">
 		<div class="container">

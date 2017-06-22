@@ -15,6 +15,7 @@
 	<link href="css/font-awesome.min.css" rel="stylesheet">
 	<link href="css/animate.css" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet">
+	<link href="css/login.css" rel="stylesheet">
 	<link href="css/responsive.css" rel="stylesheet">
 	<link href="css/formulario.css" rel="stylesheet">
 	<link rel="shortcut icon" href="images/ico/hotelcomlogo.png">
@@ -27,7 +28,7 @@
 								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 								<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
 								</button>
-									<a class="navbar-brand" href="index.html">
+									<a class="navbar-brand" href="LoginController?action=index">
 									<h1><img src="images/logo2.png" id="tamanhoLogo" alt="logo"></h1>
 									</a>
 					</div>

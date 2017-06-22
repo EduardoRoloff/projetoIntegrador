@@ -1,0 +1,35 @@
+#area-principal{
+	width: 720px;
+	margin: 12px auto;
+	overflow:hidden;
+	height: auto;
+}
+
+#listagem{
+	background: #fff;
+	margin: 5px 5px 5px 10px;
+	padding: 10px;
+	border: 1px solid blue;
+	overflow:hidden;
+	height: auto;
+}
+
+#informacoes{
+	font-size: 12px;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+.imagemRedor{
+	float: left;
+	margin: 5px 10px 5px 0;
+}
+
+h3{
+	text-decoration: underline;	
+}
+
+#negrito{
+	font-weight: bold;
+	font-size: 20px;
+}

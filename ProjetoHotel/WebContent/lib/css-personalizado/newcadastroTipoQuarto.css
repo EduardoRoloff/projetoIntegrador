@@ -1,0 +1,39 @@
+@CHARSET "UTF-8";
+
+body {
+   /* background-image: url("../../images/paginaAdm/background-dark.jpg");*/
+	background-color: #9B9B8C;
+	color: rgba(0,0,0,1);/*cor das fontes dentro do body*/
+}
+
+div#form-quarto{	
+	width: 1000px;
+	background-color: #dddddd;
+	margin: 100px auto 0px auto;/*margem ixterna do formulario*/
+	box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+	padding: 10px;/*margem interna*/
+}
+
+section#cont-sessao{
+    display: block;
+    width: auto;
+    padding: 10px;
+}
+header#cabecalho-sessao {
+    border-bottom: 1px solid #000000;
+    font-size: 24px;
+}
+
+legend{
+    border-bottom: 1px solid #9B9B8C;
+}
+
+form{
+    width: 500px;
+    margin: auto;
+}
+
+footer#rodape{
+    clear: both;
+}
+
