@@ -1,0 +1,39 @@
+@CHARSET "UTF-8";
+
+.menu-include{
+	
+}
+.menu-include ul{
+	list-style: none;
+	position:relative;
+}
+.menu-include ul li{
+	width: 150px;
+	float: left;
+}
+.menu-include ul ul{
+	position: absolute;
+	visibility: hidden;
+}
+.menu-include ul li:hover ul{
+	visibility: visible;
+}
+.menu-include ul ul li{
+	float: none;
+	border-bottom: solid 1px #ccc;
+}
+.menu-include ul ul li a{
+	background-color: #069;
+}
+.menu-include a:hover{
+	background-color: #f4f4f4;
+	color: #555;
+}
+.menu-include a {
+	padding: 15px;
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	background-color: #222;
+	color: #fff;
+}

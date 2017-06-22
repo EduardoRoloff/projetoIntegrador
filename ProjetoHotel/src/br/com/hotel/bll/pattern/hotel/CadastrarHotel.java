@@ -32,6 +32,7 @@ public class CadastrarHotel implements InterfaceStrategyHotel {
 		hotel.setClassificacao(Integer.parseInt(request.getParameter("txtclassificacao")));
 		hotel.setQtdquarto(Integer.parseInt(request.getParameter("txtqtdquarto")));
 		hotel.setTipohotel(request.getParameter("txttipohotel"));
+		hotel.setCodmatriz(Long.parseLong(request.getParameter("txtcodmatriz")));
 		hdao.salvar(hotel);
 		try {
 			response.sendRedirect(CADASTRARHOTEL);

@@ -1,9 +1,7 @@
 package br.com.hotel.bll;
 
 import java.io.IOException;
-import java.util.Iterator;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,9 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import br.com.hotel.bll.pattern.hotel.EnumFactoryHotel;
 import br.com.hotel.bll.pattern.hotel.InterfaceStrategyHotel;
-import br.com.hotel.dal.HotelDAO;
-import br.com.hotel.model.EHotel;
-
 /**
  * Servlet implementation class HotelController
  */
@@ -28,7 +23,6 @@ public class HotelController extends HttpServlet {
 	public HotelController() {
 		super();
 	}
-
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
 	 *      response)

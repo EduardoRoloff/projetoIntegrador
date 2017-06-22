@@ -30,7 +30,7 @@
 	<!-- CAIXA DE BUSCA -->		 		
 			 <div id="top" class="row">
 			    <div class="col-md-3">
-			        <h2>Itens</h2>
+			        <h2>Filial</h2>
 			    </div>
 			 <form action="hotelcontroller.do" method="post" >
 			    <div class="col-md-6" >
@@ -57,11 +57,11 @@
 			        <table class="table table-striped" cellspacing="0" cellpadding="0">
 			            <thead>
 			                <tr>
-			                    <th>Código</th>
+			                    <th>Código Matriz</th>
+			                    <th>Código Filial</th>
 			                    <th>Nome</th>
 			                    <th>Cidade</th>
 			                    <th>Estado</th>
-			                    <th>Tipo</th>
 			                    <th class="actions">Ações</th>
 			                 </tr>
 			            </thead>
@@ -70,11 +70,11 @@
 				            <tbody>
 				 
 				                <tr>
+				                	<td>${hotel.codmatriz}</td>
 				                    <td>${hotel.codhotel}</td>
 				                    <td>${hotel.nome}</td>
 				                    <td>${hotel.cidade}</td>
 				    				<td>${hotel.estado}</td>
-				    				<td>${hotel.tipohotel}</td>
 				                    
 				                    <td class="actions">
 				                        <a class="btn btn-success btn-xs" href="hotelcontroller.do?action=VISUALIZAR&txtcodhotel=${hotel.codhotel}">Visualizar</a>
@@ -83,20 +83,13 @@
 				                        <a class="btn btn-success btn-xs" href="quartocontroller.do?action=CADASTRAR&txtcodhotel=${hotel.codhotel}">+TQuarto</a>
 				                    </td>
 				                </tr>
-				 
 				            </tbody>
-			            
 			            </c:forEach>
-			            
 			         </table>
-			 
 			     </div>
 			 </div> <!-- /#list -->
-	 
 		</div>  <!-- /#main -->
-		
 	</section>
-	
 	<footer>
 	
 	</footer>	

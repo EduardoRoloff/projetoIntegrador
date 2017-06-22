@@ -26,7 +26,7 @@ public class HotelDAO {
 	}
 
 	public void cadastrar(EHotel h) {
-		String sql = "INSERT INTO hotel (nome,cep,endereco,estado,cidade, bairro, descricao, classificacao, foto, qtdquarto,tipohotel,telefone) values (?,?,?,?,?,?,?,?,?,?,?,?)";
+		String sql = "INSERT INTO hotel (nome,cep,endereco,estado,cidade, bairro, descricao, classificacao, foto, qtdquarto,tipohotel,telefone,codmatriz) values (?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
 		try {
 			PreparedStatement ps = connection.prepareStatement(sql);
@@ -42,6 +42,7 @@ public class HotelDAO {
 			ps.setInt   (10,h.getQtdquarto());
 			ps.setString(11, h.getTipohotel());
 			ps.setString(12, h.getTelefone());
+			ps.setLong(13, h.getCodmatriz());
 			ps.execute();
 			ps.close();
 		} catch (SQLException e) {
@@ -262,6 +263,47 @@ public class HotelDAO {
 			}
 			return lista;
 		}
+<<<<<<< HEAD
 		
 		
+=======
+		return lista;
+	}
+	
+	public Iterator<EHotel> listarHotelFilial() {
+		String sql = "SELECT * FROM hotel WHERE tipohotel = 'filial'";
+		List<EHotel> list = new ArrayList<>();
+		
+		try {
+			PreparedStatement ps = connection.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
+
+			while (rs.next()) {
+				EHotel hotel = new EHotel();
+				hotel.setCodhotel(rs.getLong("codhotel"));
+				hotel.setNome(rs.getString("nome"));
+				hotel.setCep(rs.getString("cep"));
+				hotel.setEndereco(rs.getString("endereco"));
+				hotel.setEstado(rs.getString("estado"));
+				hotel.setCidade(rs.getString("cidade"));
+				hotel.setBairro(rs.getString("bairro"));
+				hotel.setDescricao(rs.getString("descricao"));
+				hotel.setClassificacao(rs.getInt("classificacao"));
+				hotel.setFoto(rs.getString("foto"));
+				hotel.setQtdquarto(rs.getInt("qtdquarto"));
+				hotel.setTipohotel(rs.getString("tipohotel"));
+				hotel.setTelefone(rs.getString("telefone"));
+				hotel.setCodmatriz(rs.getLong("codmatriz"));
+				list.add(hotel);
+			} 
+			
+			ps.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		Iterator<EHotel> it = list.iterator();
+		return it;
+	}// fim do metodo listarTodos
+	
+>>>>>>> master
 }

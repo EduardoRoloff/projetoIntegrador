@@ -13,39 +13,33 @@
 <!-- CSS do bootstrap -->
 <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
 <!-- CSS personalizado -->
-<link rel="stylesheet" href="lib/css-personalizado/logado-admsystem.css">
+<link rel="stylesheet" href="lib/css-personalizado/newcadastroHotel.css">
+<link rel="stylesheet" href="lib/css-personalizado/menuAdm.css">
 <script type="text/javascript" src="js/validaformhotel.js"></script>
 </head>
 
 <body>
 	<header class="navbar navbar-inverse navbar-fixed-top">
-		<!-- barra de navegacao do topo -->
-
 		<c:import url="includes/menuAdm.jsp"></c:import>
-
-		<!-- fim navbar  -->
 	</header>
-
-	<section>
-
+	<div id="form-hotel">
+	<section id="cont-sessao">
 		<!-- INICIO DA MAIN -->
 		<div id="main" class="container-fluid">
-
 			<h3 class="page-header">Adicionar Hotel</h3>
-
-			<form class="container" name="formhotel" action="hotelcontroller.do" method="post">
+			<form name="formhotel" action="hotelcontroller.do" method="post">
 
 				<!-- INICIO DO FORMULARIO -->
-				<div class="row">
-				<div class="">
-						<label for="campo1"></label> 
+				<fieldset><legend>Identificação do Hotel</legend>
+				<div class="row" >
+					<div>
 						<input type="hidden" name="txtcodhotel" class="form-control" id="campo1" value="${requestScope.hotel.codhotel}" />
 					</div>
 				
 					<div class="form-group col-md-9">
-						<label for="campo1">Nome do Hotel</label> <input type="text"
-							name="txtnome" class="form-control" id="campo1"
-							value="${requestScope.hotel.nome}" />
+						<label for="campo1">Nome do Hotel</label> 
+						<input type="text" name="txtnome" class="form-control" id="campo1"
+							   value="${requestScope.hotel.nome}" />
 					</div>
 					
 					<div class="form-group col-md-3">
@@ -54,7 +48,9 @@
 							value="${requestScope.hotel.telefone}" />
 					</div>
 				</div>
-
+				</fieldset>
+				
+				<fieldset><legend>Endereço do Hotel</legend>
 				<div class="row">
 					<div class="form-group col-md-3">
 						<label for="campo1">CEP</label> <input type="text"
@@ -63,7 +59,7 @@
 					</div>
 					
 					<div class="form-group col-md-9">
-						<label for="campo1">Endereço</label> <input type="text" name="txtendereco"
+						<label for="campo1">Rua</label> <input type="text" name="txtendereco"
 							class="form-control" id="endereco"
 							value="${requestScope.hotel.endereco}" />
 					</div>
@@ -88,73 +84,66 @@
 							value="${requestScope.hotel.estado}" />
 					</div>
 				</div>
-
+				</fieldset>
+				
+				<fieldset><legend>Informações Adicionais</legend>
 				<div class="row">
-					<div class="form-group col-md-4">
-						<!-- preencher o espaço -->	
+					 
+					<div class="form-group col-md-2">
+						<label for="campo1">Quartos</label>
+						 <input type="number" name="txtqtdquarto" class="form-control" id="campo1" min="0" value="${requestScope.hotel.qtdquarto}" />
 					</div>
 					
-					<div class="form-group col-md-1">
-						<label for="campo1">Quartos</label>
-						 <input type="text" name="txtqtdquarto" class="form-control" id="campo1" value="${requestScope.hotel.qtdquarto}" />
-					</div>
-
-					<div class="form-group col-md-2">
+					<div class="form-group col-md-3">
 						<label>Tipo</label>
 						<div class="selectContainer">
-							<select class="form-control" name="txttipohotel">
-								<option value="${hotel.tipohotel}">${hotel.tipohotel }</option>
-								<option value="Matriz">Matriz</option>
-								<option value="Filial">Filial</option>
-							</select>
+							<input type="radio" id="tipo-radio1" name="txttipohotel" value="matriz" checked/><label for="tipo-radio1">Matriz</label>
+							<input type="radio" id="tipo-radio2" name="txttipohotel" value="filial"/><label for="tipo-radio2">Filial</label>
 						</div>
 					</div>
 					
-					<div class="form-group col-md-1">
+					<div class="form-group col-md-2">
+						<label>Cód. Matriz</label>
+						<div class="selectContainer">
+							<input type="text" id="codmatriz-1" class="form-control" name="txtcodmatriz" value="${hotel.codmatriz}"/>
+						</div>
+					</div>
+						
+					<div class="form-group col-md-5">
 						<label>Classificação</label>
 						<div class="selectContainer">
-							<select class="form-control" name="txtclassificacao">
-								<option value="${hotel.classificacao }">${hotel.classificacao }</option>
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-							</select>
+							<input type="radio" id="classificacao-radio1" name="txtclassificacao" value="1"/><label for="classificacao-radio1">1 Estrela</label>
+							<input type="radio" id="classificacao-radio2" name="txtclassificacao" value="2"/><label for="classificacao-radio2">2 Estrelas</label>
+							<input type="radio" id="classificacao-radio3" name="txtclassificacao" value="3" checked/><label for="classificacao-radio3">3 Estrelas</label>
 						</div>
 					</div>
-					
-					<div class="form-group col-md-4">
-						<!-- preencher o espaço -->	
-					</div>
 				</div>
-
+			</fieldset>
+			
+			<fieldset><legend>Detalhes do Hotel</legend>
 				<div class="row">
 					<div class="form-group col-md-12">
 						<label class=" control-label">Descrição</label>
 						<textarea name="txtdescricao" class="form-control" rows="5">${requestScope.hotel.descricao}</textarea>
 					</div>
 				</div>
-
-
+			</fieldset>
 				<!-- BOTÕES DO FORMULARIO -->
 				<hr />
 				<div id="actions" class="row">
-
 					<div class="col-md-12">
 						<button type="submit" name="btnacao" value="CADASTRAR" class="btn btn-primary" onclick= "validarform();">Salvar</button>
 						<a href="hotelcontroller.do?action=LISTAR" class="btn btn-default">Cancelar</a>
 					</div>
-
 				</div>
-				<!-- /#id action class row -->
-
 			</form>
-
 		</div>
-		<!-- /#main -->
-
 	</section>
-
-	<footer> </footer>
+	</div>
+	
+	<footer id="f1" class="navbar">
+		<c:import url="includes/footerAdm.jsp"></c:import>
+	</footer>
 
 	<script src="lib/jquery/jquery.min.js"></script>
 	<script src="lib/bootstrap/js/bootstrap.min.js"></script>
