@@ -16,17 +16,13 @@ public class EHotel {
 	private String tipohotel;
 	private String telefone;
 	private double precoDiaria;
-<<<<<<< HEAD
-	private long qtdDias;
-
+	private long   qtdDias;
+	private long   codmatriz;
 	
 	public long getQtdDias() {
 		return qtdDias;
 	}
-=======
-	private long   codmatriz;
->>>>>>> master
-
+	
 	public void setQtdDias(long qtdDias) {
 		this.qtdDias = qtdDias;
 	}

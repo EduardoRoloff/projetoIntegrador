@@ -263,14 +263,8 @@ public class HotelDAO {
 			}
 			return lista;
 		}
-<<<<<<< HEAD
-		
-		
-=======
-		return lista;
-	}
-	
-	public Iterator<EHotel> listarHotelFilial() {
+
+	public Iterator<EHotel> listarHotelFilial(){
 		String sql = "SELECT * FROM hotel WHERE tipohotel = 'filial'";
 		List<EHotel> list = new ArrayList<>();
 		
@@ -304,6 +298,4 @@ public class HotelDAO {
 		Iterator<EHotel> it = list.iterator();
 		return it;
 	}// fim do metodo listarTodos
-	
->>>>>>> master
 }
