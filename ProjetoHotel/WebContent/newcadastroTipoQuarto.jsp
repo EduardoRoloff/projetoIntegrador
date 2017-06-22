@@ -14,6 +14,7 @@
 <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
 <!-- CSS personalizado -->
 <link rel="stylesheet" href="lib/css-personalizado/newcadastroTipoQuarto.css">
+<link rel="stylesheet" href="lib/css-personalizado/menuAdm.css">
 <script type="text/javascript" src="js/validaformhotel.js"></script>
 </head>
 

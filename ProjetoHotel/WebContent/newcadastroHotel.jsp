@@ -14,6 +14,7 @@
 <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
 <!-- CSS personalizado -->
 <link rel="stylesheet" href="lib/css-personalizado/newcadastroHotel.css">
+<link rel="stylesheet" href="lib/css-personalizado/menuAdm.css">
 <script type="text/javascript" src="js/validaformhotel.js"></script>
 </head>
 
@@ -87,9 +88,6 @@
 				
 				<fieldset><legend>Informações Adicionais</legend>
 				<div class="row">
-					 <div class="form-group col-md-1">
-						<!-- preencher o espaço -->
-					</div>	
 					 
 					<div class="form-group col-md-2">
 						<label for="campo1">Quartos</label>
@@ -103,8 +101,15 @@
 							<input type="radio" id="tipo-radio2" name="txttipohotel" value="filial"/><label for="tipo-radio2">Filial</label>
 						</div>
 					</div>
+					
+					<div class="form-group col-md-2">
+						<label>Cód. Matriz</label>
+						<div class="selectContainer">
+							<input type="text" id="codmatriz-1" class="form-control" name="txtcodmatriz" value="${hotel.codmatriz}"/>
+						</div>
+					</div>
 						
-					<div class="form-group col-md-4">
+					<div class="form-group col-md-5">
 						<label>Classificação</label>
 						<div class="selectContainer">
 							<input type="radio" id="classificacao-radio1" name="txtclassificacao" value="1"/><label for="classificacao-radio1">1 Estrela</label>
@@ -112,12 +117,9 @@
 							<input type="radio" id="classificacao-radio3" name="txtclassificacao" value="3" checked/><label for="classificacao-radio3">3 Estrelas</label>
 						</div>
 					</div>
-					
-					<div class="form-group col-md-2">
-						<!-- preencher o espaço -->	
-					</div>
 				</div>
 			</fieldset>
+			
 			<fieldset><legend>Detalhes do Hotel</legend>
 				<div class="row">
 					<div class="form-group col-md-12">

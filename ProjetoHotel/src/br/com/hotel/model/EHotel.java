@@ -16,9 +16,12 @@ public class EHotel {
 	private String tipohotel;
 	private String telefone;
 	private double precoDiaria;
+	private long   codmatriz;
+
+
+	public EHotel(){
+	}
 	
-
-
 	public double getPrecoDiaria() {
 		return precoDiaria;
 	}
@@ -26,8 +29,6 @@ public class EHotel {
 	public void setPrecoDiaria(double precoDiaria) {
 		this.precoDiaria = precoDiaria;
 	}
-
-	public EHotel(){}
 
 	public long getCodhotel() {
 		return codhotel;
@@ -133,5 +134,12 @@ public class EHotel {
 		this.telefone = telefone;
 	}
 
+	public long getCodmatriz() {
+		return codmatriz;
+	}
+
+	public void setCodmatriz(long codmatriz) {
+		this.codmatriz = codmatriz;
+	}
 	
 }
