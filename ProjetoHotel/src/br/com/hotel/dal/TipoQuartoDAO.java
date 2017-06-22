@@ -113,7 +113,4 @@ public class TipoQuartoDAO {
 		}
 		return objeto;
 	}
-	
-	
-	
 }
