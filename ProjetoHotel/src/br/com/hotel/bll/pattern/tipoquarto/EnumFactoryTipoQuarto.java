@@ -23,11 +23,15 @@ public enum EnumFactoryTipoQuarto {
 	SELECIONAR{
 		@Override
 		public InterfaceStrategyTipoQuarto obterAcao() {
-			// TODO Auto-generated method stub
 			return new ListarQuartoBusca();
 		}
+	},
+	LISTARTIPOQUARTO{
+		@Override
+		public InterfaceStrategyTipoQuarto obterAcao() {
+			return new ListarTipoQuartoAdm();
+		}
 	};
-	
 	
 	public abstract InterfaceStrategyTipoQuarto obterAcao();
 }

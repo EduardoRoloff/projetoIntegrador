@@ -23,13 +23,11 @@ import br.com.hotel.model.EHotel;
 public class AutenticadorAdm extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	//Teste paulo
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
 	public AutenticadorAdm() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	/**
@@ -37,7 +35,11 @@ public class AutenticadorAdm extends HttpServlet {
 	 *      response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		HttpSession sessao = request.getSession(false);
+		if(sessao != null){
+			sessao.invalidate();
+		}
+		response.sendRedirect("index.jsp");
 	}
 
 	/**

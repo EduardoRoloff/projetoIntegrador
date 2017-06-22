@@ -19,11 +19,14 @@
 			    	<ul>
 			    		<li><a href="hotelcontroller.do?action=LISTARFILIAL">Listar Filial</a></li>
 			    		<li><a href="hotelcontroller.do?action=LISTARMATRIZ">Listar Matriz</a></li>
-			    		<li><a href="quartocontroller.do?action=LISTARTIPOQUARTO">Listar Tipo Quarto</a></li>
+			    		<li><a href="listaTipoQuarto.jsp">Listar Tipo Quarto</a></li>
 			    	</ul>
 			    </li>
-			    <li><a href="#">Perfil</a></li>
-			    <li><a href="#">Ajuda</a></li>
+			    <li><a href="#">Sair</a>
+			    	<ul>
+			    		<li><a href="autenticadoradm.do">Sair</a></li>
+			    	</ul>
+			    </li>
 			   </ul>
 			  </div>
 			 </div>

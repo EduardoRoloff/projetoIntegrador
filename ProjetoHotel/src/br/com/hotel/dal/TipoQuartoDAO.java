@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import br.com.hotel.model.EHotel;
@@ -113,6 +114,32 @@ public class TipoQuartoDAO {
 		return objeto;
 	}
 	
-	
+	public Iterator<ETipoQuarto> listarTipoQuartoAdm(long codhotel) {
+		String sql = "SELECT tipoquarto.codtipo AS codquarto,tipoquarto.nome AS nometipoquarto, "
+					+ "tipoquarto.quantidadequarto AS qtdquarto,hotel.nome AS nomehotel "
+					+ " FROM tipoquarto INNER JOIN hotel "
+					+ "ON tipoquarto.codhotel = hotel.codhotel "
+					+ "WHERE hotel.codhotel = ?";
+		List<ETipoQuarto> list = new ArrayList<>();
+		
+		try {
+			PreparedStatement ps = connection.prepareStatement(sql);
+			ps.setLong(1, codhotel);
+			ResultSet rs = ps.executeQuery();
+			while (rs.next()) {
+				ETipoQuarto tipoQuarto = new ETipoQuarto();
+				tipoQuarto.setCodtipo(rs.getLong("codquarto"));
+				tipoQuarto.setNome(rs.getString("nometipoquarto"));
+				tipoQuarto.setQuantidadequarto(Integer.parseInt(rs.getString("qtdquarto")));
+				tipoQuarto.getHotel().setNome(rs.getString("nomehotel"));
+				list.add(tipoQuarto);
+			} 
+			ps.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		Iterator<ETipoQuarto> it = list.iterator();
+		return it;
+	}// fim do metodo listarTodos
 	
 }
