@@ -77,7 +77,7 @@
 				    				<td>${hotel.tipohotel}</td>
 				                    
 				                    <td class="actions">
-				                        <a class="btn btn-success btn-xs" href="hotelcontroller.do?action=VISUALIZAR&txtcodhotel=${hotel.codhotel}">Visualizar</a>
+				                        <!--<a class="btn btn-success btn-xs" href="hotelcontroller.do?action=VISUALIZAR&txtcodhotel=${hotel.codhotel}">Visualizar</a>-->
 				                        <a class="btn btn-warning btn-xs" href="hotelcontroller.do?action=ATUALIZAR&txtcodhotel=${hotel.codhotel}">Editar</a>
 				                        <a class="btn btn-danger btn-xs"  href="hotelcontroller.do?action=DELETAR&txtcodhotel=${hotel.codhotel}">Excluir</a>
 				                        <a class="btn btn-success btn-xs" href="quartocontroller.do?action=CADASTRAR&txtcodhotel=${hotel.codhotel}">+TQuarto</a>

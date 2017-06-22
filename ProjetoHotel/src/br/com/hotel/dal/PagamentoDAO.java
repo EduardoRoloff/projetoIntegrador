@@ -16,24 +16,30 @@ public class PagamentoDAO {
 		connection = Conexao.getConnection();
 	}
 	
-	/*public long Inserir(EPagamento objeto) {
+public void Inserir(EPagamento objeto) {
 		
-		String sql = "INSERT INTO reserva (dataentrada,datasaida,codtipoquarto, codcliente) "
-				+ "values (?,?,?,?) RETURNING codreserva ";
+		String sql = "INSERT INTO pagamento (nrocartao, bandeira, datapagamento, valorreserva, codigoseguranca, mesvencimentocartao, anovencimento, cpf, codclientep, codreserva, nomenocartao) "
+				+ "values(?, ?, CURRENT_TIMESTAMP, ?, ?, ?, ?, ?, ?, ?, ?)";
 		
 		try {
 			PreparedStatement ps = connection.prepareStatement(sql);
-			ps.setString(1, dataentrada);
-			ps.setString(2, datasaida);
-			ps.setLong(3, codtipo);
-			ps.setLong(4, codcliente);
-			ResultSet rs = ps.executeQuery();
+			ps.setLong(1, objeto.getNrocartao());
+			ps.setString(2, objeto.getBandeira());
+			ps.setDouble(3, objeto.getValorreserva());
+			ps.setLong(4, objeto.getCodigoseguranca());
+			ps.setString(5, objeto.getMesvencimentocartao());
+			ps.setString(6, objeto.getAnovencimento());
+			ps.setString(7, objeto.getCpf());
+			ps.setLong(8, objeto.getCliente().getCodcliente());
+			ps.setLong(9, objeto.getLocacao().getCodreserva());
+			ps.setString(10, objeto.getNomenocartao());
+			//System.out.println("SQL: " + ps.toString());
+			ps.execute();
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		return (Long) null;
-	}*/
+	}
 	
 	
 }

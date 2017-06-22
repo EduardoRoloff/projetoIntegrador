@@ -14,10 +14,10 @@
 			  </div>
 			  <div id="navbar" class="navbar-collapse collapse btn ">
 			   <ul class="nav navbar-nav navbar-right">
-			    <li><a href="hotelcontroller.do?action=LISTAR" class="btn btn-default">Cancelar</a></li>
-			    <li><a href="#">Opções</a></li>
-			    <li><a href="#">Perfil</a></li>
-			    <li><a href="#">Ajuda</a></li>
+			    <li><a href="hotelcontroller.do?action=LISTAR" class="btn btn-default">Voltar</a></li>
+			    <li><a href="#"></a></li>
+			    <li><a href="#"></a></li>
+			    <li><a href="#"></a></li>
 			   </ul>
 			  </div>
 			 </div>

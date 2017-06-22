@@ -1,5 +1,7 @@
 package br.com.hotel.bll.pattern.locacao;
 
+import java.io.IOException;
+
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -23,7 +25,7 @@ public class EfetuarLocacao implements InterfaceStrategyLocacao {
 		double valorDiaria = Double.parseDouble(request.getParameter("valorDiaria"));
 		long codtipo = Long.parseLong(request.getParameter("codigoQuarto"));
 		
-		// Pegando os valores da sessão o codigo do cliente
+		// Pegando os valores da sessï¿½o o codigo do cliente
 		HttpSession sessao = request.getSession();
 		ECliente cliente = new ECliente();
 		cliente = (ECliente) sessao.getAttribute("usuario");
@@ -57,6 +59,12 @@ public class EfetuarLocacao implements InterfaceStrategyLocacao {
 	    objeto.setValorreserva(valorDiaria);
 	    objeto.getCliente().setCodcliente(codcliente);
 	    objeto.getLocacao().setCodreserva(codlocacao);
+	    persisPagamento.Inserir(objeto);
+	    try {
+			response.sendRedirect(HOME);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	    
 	}
 }

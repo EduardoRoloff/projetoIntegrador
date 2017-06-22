@@ -14,7 +14,10 @@ public class EPagamento {
 	private ECliente cliente;
 	private ELocacao locacao;
 	
-	
+	public EPagamento(){
+		cliente = new ECliente();
+		locacao = new ELocacao();
+	}
 	public ELocacao getLocacao() {
 		return locacao;
 	}
