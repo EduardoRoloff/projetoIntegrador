@@ -104,7 +104,6 @@ public class PCliente {
 			ps.execute();
 			ps.close();
 			
-			System.out.println("Alterado com sucesso.");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			System.out.println("ERRO: Classe 'ClienteDAO', metodo 'alterar'.");
@@ -171,7 +170,6 @@ public class PCliente {
 			ps.execute();
 			ps.close();
 			
-			System.out.println("Excluido com sucesso.");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			System.out.println("ERRO: Classe 'ClienteDAO', metodo 'deletar'.");

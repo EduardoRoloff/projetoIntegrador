@@ -2,6 +2,8 @@ package br.com.hotel.bll.pattern.tipoquarto;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -16,9 +18,10 @@ public class CadastrarTipoQuarto implements InterfaceStrategyTipoQuarto{
 	public void acaoStrategy(HttpServletRequest request, HttpServletResponse response) {
 		String codhotel = request.getParameter("txtcodhotel");
 		request.setAttribute("hotel", hoteldao.pesquisarHotelCod(Long.parseLong(codhotel)));
+		RequestDispatcher rd = request.getRequestDispatcher(CADASTRARTIPOQUARTO);
 		try {
-			response.sendRedirect(CADASTRARTIPOQUARTO);
-		} catch (IOException e) {
+			rd.forward(request, response);
+		} catch (IOException | ServletException e) {
 			e.printStackTrace();
 		}
 	}

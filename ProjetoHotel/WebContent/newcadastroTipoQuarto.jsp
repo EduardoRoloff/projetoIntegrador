@@ -27,7 +27,7 @@
 		<!-- INICIO DA MAIN -->
 		<div id="main" class="container-fluid">
 			<h3 class="page-header">Adicionar Tipo de Quarto</h3>
-			<form name="formhotel" action="hotelcontroller.do" method="post">
+			<form name="formhotel" action="quartocontroller.do" method="post">
 
 				<!-- INICIO DO FORMULARIO -->
 				<fieldset id="info-hotel"><legend>Informação do Hotel</legend>
