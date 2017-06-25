@@ -79,7 +79,7 @@
 				                    <td class="actions">
 				                        <!--<a class="btn btn-success btn-xs" href="hotelcontroller.do?action=VISUALIZAR&txtcodhotel=${hotel.codhotel}">Visualizar</a>-->
 				                        <a class="btn btn-warning btn-xs" href="hotelcontroller.do?action=ATUALIZAR&txtcodhotel=${hotel.codhotel}">Editar</a>
-				                        <a class="btn btn-danger btn-xs"  href="hotelcontroller.do?action=DELETAR&txtcodhotel=${hotel.codhotel}">Excluir</a>
+				                        <a class="btn btn-danger btn-xs"  href="javascript:confirmarExclusao(${hotel.codhotel})">Excluir</a>
 				                        <a class="btn btn-success btn-xs" href="quartocontroller.do?action=CADASTRAR&txtcodhotel=${hotel.codhotel}">+TQuarto</a>
 				                    </td>
 				                </tr>
@@ -100,7 +100,7 @@
 	<footer>
 	
 	</footer>	
-		
+	<script src="lib/js-personalizado/logado-admsystem.js"></script>	
 	<script src="lib/jquery/jquery.min.js"></script>
 	<script src="lib/bootstrap/js/bootstrap.min.js"></script>
 </body>
