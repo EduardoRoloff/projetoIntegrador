@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import br.com.hotel.dal.TipoQuartoDAO;
-import br.com.hotel.model.EHotel;
 import br.com.hotel.model.ETipoQuarto;
 
 public class ListarTipoQuartoAdm implements InterfaceStrategyTipoQuarto{
@@ -23,15 +22,23 @@ public class ListarTipoQuartoAdm implements InterfaceStrategyTipoQuarto{
 	public void acaoStrategy(HttpServletRequest request, HttpServletResponse response) {
 		long codhotel = Long.parseLong(request.getParameter("data"));
 		Iterator<ETipoQuarto> listaQuarto =  quartoDao.listarTipoQuartoAdm(codhotel);
-		request.setAttribute("listaQuarto", listaQuarto);
-		RequestDispatcher rd = request.getRequestDispatcher(REDIRECT);
-		try {
-			rd.forward(request, response);
-		} catch (ServletException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}	
+		if(listaQuarto.hasNext()){	
+			request.setAttribute("listaQuarto", listaQuarto);
+			RequestDispatcher rd = request.getRequestDispatcher(REDIRECT);
+			try {
+				rd.forward(request, response);
+			} catch (ServletException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}else{
+			try {
+				response.sendRedirect("listaTipoQuarto.jsp");
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 
 }

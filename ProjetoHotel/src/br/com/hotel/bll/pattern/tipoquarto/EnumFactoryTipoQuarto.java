@@ -31,6 +31,11 @@ public enum EnumFactoryTipoQuarto {
 		public InterfaceStrategyTipoQuarto obterAcao() {
 			return new ListarTipoQuartoAdm();
 		}
+	},DELETAR {
+		@Override
+		public InterfaceStrategyTipoQuarto obterAcao() {
+			return new DeletarTipoQuarto();
+		}
 	};
 	
 	public abstract InterfaceStrategyTipoQuarto obterAcao();

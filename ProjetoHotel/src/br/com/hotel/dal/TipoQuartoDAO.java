@@ -141,4 +141,34 @@ public class TipoQuartoDAO {
 		Iterator<ETipoQuarto> it = list.iterator();
 		return it;
 	}// fim do metodo listarTodos
+	
+	public void deletarTipoQuarto(EHotel h) {
+		String sql = "DELETE FROM tipoquarto WHERE codhotel=?";
+
+		try {
+			PreparedStatement ps = connection.prepareStatement(sql);
+
+			ps.setLong(1, h.getCodhotel());
+
+			ps.execute();
+			ps.close();
+
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+		}
+	}// fim do metodo deletar
+	
+	public void deletarTipoQuartoCod(ETipoQuarto tipoQ) {
+		String sql = "DELETE FROM tipoquarto WHERE codtipo=?";
+		try {
+			PreparedStatement ps = connection.prepareStatement(sql);
+			ps.setLong(1, tipoQ.getCodtipo());
+			ps.execute();
+			ps.close();
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}// fim do metodo deletar
 }

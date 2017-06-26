@@ -28,11 +28,8 @@ public class SalvarTipoQuarto implements InterfaceStrategyTipoQuarto{
 		tipoQuarto.setDescricao(request.getParameter("txtdescricao"));
 		tipoQuarto.getHotel().setCodhotel(Long.parseLong(request.getParameter("txtcodhotel")));
 		quartoDao.cadastrar(tipoQuarto);
-		RequestDispatcher view = request.getRequestDispatcher(HOME);
 	    try {
-			view.forward(request, response);
-		} catch (ServletException e) {
-			e.printStackTrace();
+	    	response.sendRedirect(HOME);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

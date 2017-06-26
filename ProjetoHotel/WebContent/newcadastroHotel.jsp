@@ -39,13 +39,13 @@
 					<div class="form-group col-md-9">
 						<label for="campo1">Nome do Hotel</label> 
 						<input type="text" name="txtnome" class="form-control" id="campo1"
-							   value="${requestScope.hotel.nome}" />
+							   value="${requestScope.hotel.nome}" required="required"/>
 					</div>
 					
 					<div class="form-group col-md-3">
 						<label for="campo1">Telefone</label> <input type="text"
 							name="txttelefone" class="form-control" id="campo1"
-							value="${requestScope.hotel.telefone}" />
+							value="${requestScope.hotel.telefone}" onkeyup="mascara( this, mtel );" maxlength="15" required="required"/>
 					</div>
 				</div>
 				</fieldset>
@@ -55,13 +55,13 @@
 					<div class="form-group col-md-3">
 						<label for="campo1">CEP</label> <input type="text"
 							name="txtcep" class="form-control" id="cep"
-							value="${requestScope.hotel.cep}" />
+							value="${requestScope.hotel.cep}" required="required"/>
 					</div>
 					
 					<div class="form-group col-md-9">
 						<label for="campo1">Rua</label> <input type="text" name="txtendereco"
 							class="form-control" id="endereco"
-							value="${requestScope.hotel.endereco}" />
+							value="${requestScope.hotel.endereco}" required="required"/>
 					</div>
 				</div>
 
@@ -69,19 +69,19 @@
 					<div class="form-group col-md-6">
 						<label for="campo1">Bairro</label> <input type="text"
 							name="txtbairro" class="form-control" id="bairro"
-							value="${requestScope.hotel.bairro}" />
+							value="${requestScope.hotel.bairro}" required="required"/>
 					</div>
 
 					<div class="form-group col-md-3">
 						<label for="campo1">Cidade</label> <input type="text" name="txtcidade"
 							class="form-control" id="cidade"
-							value="${requestScope.hotel.cidade}" />
+							value="${requestScope.hotel.cidade}" required="required"/>
 					</div>
 
 					<div class="form-group col-md-3">
 						<label for="campo1">Estado</label> <input type="text"
 							name="txtestado" class="form-control" id="estado"
-							value="${requestScope.hotel.estado}" />
+							value="${requestScope.hotel.estado}" required="required"/>
 					</div>
 				</div>
 				</fieldset>
@@ -124,7 +124,7 @@
 				<div class="row">
 					<div class="form-group col-md-12">
 						<label class=" control-label">Descrição</label>
-						<textarea name="txtdescricao" class="form-control" rows="5">${requestScope.hotel.descricao}</textarea>
+						<textarea name="txtdescricao" class="form-control" rows="5" required="required">${requestScope.hotel.descricao}</textarea>
 					</div>
 				</div>
 			</fieldset>
@@ -144,7 +144,7 @@
 	<footer id="f1" class="navbar">
 		<c:import url="includes/footerAdm.jsp"></c:import>
 	</footer>
-
+	<script src="lib/js-personalizado/logado-admsystem.js"></script>
 	<script src="lib/jquery/jquery.min.js"></script>
 	<script src="lib/bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/endereco.js"></script>

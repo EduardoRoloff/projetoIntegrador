@@ -64,19 +64,19 @@
 			                 </tr>
 			            </thead>
 			            
-			            <c:forEach items="${listaQuarto}" var="lista">
+			            <c:forEach items="${listaQuarto}" var="quarto">
 				            <tbody>
 				                <tr>
-				                    <td>${lista.codtipo}</td>
-				                    <td>${lista.nome}</td>
-				                    <td>${lista.quantidadequarto}</td>
-				    				<td>${lista.hotel.nome}</td>
+				                    <td>${quarto.codtipo}</td>
+				                    <td>${quarto.nome}</td>
+				                    <td>${quarto.quantidadequarto}</td>
+				    				<td>${quarto.hotel.nome}</td>
 				                    
 				                    <td class="actions">
 				                      <!--<a class="btn btn-success btn-xs" href="hotelcontroller.do?action=VISUALIZAR&txtcodhotel=${hotel.codhotel}">Visualizar</a>-->
-				                        <a class="btn btn-warning btn-xs" href="hotelcontroller.do?action=ATUALIZAR&txtcodhotel=${hotel.codhotel}">Editar</a>
-				                        <a class="btn btn-danger btn-xs"  href="hotelcontroller.do?action=DELETAR&txtcodhotel=${hotel.codhotel}">Excluir</a>
-				                        <a class="btn btn-success btn-xs" href="quartocontroller.do?action=CADASTRAR&txtcodhotel=${hotel.codhotel}">+TQuarto</a>
+				                        <a class="btn btn-warning btn-xs" href="hotelcontroller.do?action=ATUALIZAR&txtcodhotel=${quarto.hotel.codhotel}">Editar</a>
+				                        <a class="btn btn-danger btn-xs"  href="javascript:confirmarExclusao(${quarto.codtipo})">Excluir</a>
+				                        <a class="btn btn-success btn-xs" href="quartocontroller.do?action=CADASTRAR&txtcodtipo=${quarto.codtipo}">+TQuarto</a>
 				                    </td>
 				                </tr>
 				 
@@ -96,7 +96,7 @@
 	<footer>
 	
 	</footer>	
-		
+	<script src="lib/js-personalizado/listaTipoQuarto.js"></script>	
 	<script src="lib/jquery/jquery.min.js"></script>
 	<script src="lib/bootstrap/js/bootstrap.min.js"></script>
 </body>

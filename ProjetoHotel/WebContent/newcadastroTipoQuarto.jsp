@@ -50,25 +50,26 @@
 					<div class="form-group col-md-9">
 						<label for="id-nome">Nome do Tipo</label> <input type="text"
 							name="txtnome" class="form-control" id="id-nome"
-							value="" />
+							value="" required="required"/>
+					</div>
+					<div class="form-group col-md-2">
+						<label for="id-qtpessoass">Quantidade</label>
+						<div class="selectContainer">
+							<input type="number" id="id-qtdquarto" name="txtqtquarto" class="form-control" min="0" max="500" value="0"/>
+						</div>
 					</div>
 					
-					<div class="form-group col-md-3">
-						<label for="id-valor">Valor da Diária</label> <input type="text" name="txtvalor"
-							class="form-control" id="id-valor"
-							value="" />
-					</div>
 				</div>
 				</fieldset>
 				
 				<fieldset><legend>Informações Adicionais</legend>
 				<div class="row">
-					<div class="form-group col-md-4">
+					<div class="form-group col-md-3">
 						<!-- preencher o espaço -->	
 					</div>	
 					<div class="form-group col-md-2">
 						<label for="id-qtcama">Quantidade de Cama</label>
-						 <input type="number" name="txtqtcama" class="form-control" id="id-qtcama" min="0" max="99" value="0" />
+						 <input type="number" name="txtqtcama" class="form-control" id="id-qtcama" min="0" max="99" value="0"/>
 					</div>
 					
 					<div class="form-group col-md-2">
@@ -77,7 +78,13 @@
 							<input type="number" id="id-qtpessoass" name="txtqtpessoas" class="form-control" min="0" max="99" value="0"/>
 						</div>
 					</div>
-					<div class="form-group col-md-4">
+					
+					<div class="form-group col-md-2">
+						<label for="id-valor">Valor da Diária para o Tipo</label> <input type="text" name="txtvalor"
+							class="form-control" id="id-valor"
+							value="" required="required"/>
+					</div>
+					<div class="form-group col-md-3">
 						<!-- preencher o espaço -->	
 					</div>
 				</div>
